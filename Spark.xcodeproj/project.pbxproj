@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8623628521B537B000DFCA94 /* PassedRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8623628421B537B000DFCA94 /* PassedRelation.swift */; };
 		8654308321B42AE900C6CC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654308221B42AE900C6CC31 /* AppDelegate.swift */; };
-		8654308521B42AE900C6CC31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654308421B42AE900C6CC31 /* ViewController.swift */; };
+		8654308521B42AE900C6CC31 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654308421B42AE900C6CC31 /* HomeController.swift */; };
 		8654308821B42AE900C6CC31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8654308621B42AE900C6CC31 /* Main.storyboard */; };
 		8654308A21B42AEC00C6CC31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8654308921B42AEC00C6CC31 /* Assets.xcassets */; };
 		8654308D21B42AEC00C6CC31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8654308B21B42AEC00C6CC31 /* LaunchScreen.storyboard */; };
+		8654309621B4A96E00C6CC31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654309521B4A96E00C6CC31 /* Extensions.swift */; };
+		8654309921B4AA0100C6CC31 /* passedSparkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654309821B4AA0100C6CC31 /* passedSparkCell.swift */; };
+		8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654309B21B4AC2400C6CC31 /* MenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8623628421B537B000DFCA94 /* PassedRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassedRelation.swift; sourceTree = "<group>"; };
 		8654307F21B42AE900C6CC31 /* Spark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8654308221B42AE900C6CC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8654308421B42AE900C6CC31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8654308421B42AE900C6CC31 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8654308721B42AE900C6CC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8654308921B42AEC00C6CC31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8654308C21B42AEC00C6CC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8654308E21B42AEC00C6CC31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8654309521B4A96E00C6CC31 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8654309821B4AA0100C6CC31 /* passedSparkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passedSparkCell.swift; sourceTree = "<group>"; };
+		8654309B21B4AC2400C6CC31 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8623628321B5379400DFCA94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8623628421B537B000DFCA94 /* PassedRelation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8654307621B42AE900C6CC31 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +70,42 @@
 		8654308121B42AE900C6CC31 /* Spark */ = {
 			isa = PBXGroup;
 			children = (
+				8623628321B5379400DFCA94 /* Model */,
+				8654309A21B4AA6800C6CC31 /* Controller */,
+				8654309721B4A9DC00C6CC31 /* View */,
+				8654309421B4A93400C6CC31 /* Helpers */,
 				8654308221B42AE900C6CC31 /* AppDelegate.swift */,
-				8654308421B42AE900C6CC31 /* ViewController.swift */,
 				8654308621B42AE900C6CC31 /* Main.storyboard */,
 				8654308921B42AEC00C6CC31 /* Assets.xcassets */,
 				8654308B21B42AEC00C6CC31 /* LaunchScreen.storyboard */,
 				8654308E21B42AEC00C6CC31 /* Info.plist */,
 			);
 			path = Spark;
+			sourceTree = "<group>";
+		};
+		8654309421B4A93400C6CC31 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8654309521B4A96E00C6CC31 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8654309721B4A9DC00C6CC31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8654309821B4AA0100C6CC31 /* passedSparkCell.swift */,
+				8654309B21B4AC2400C6CC31 /* MenuBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8654309A21B4AA6800C6CC31 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8654308421B42AE900C6CC31 /* HomeController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8654308521B42AE900C6CC31 /* ViewController.swift in Sources */,
+				8654308521B42AE900C6CC31 /* HomeController.swift in Sources */,
+				8623628521B537B000DFCA94 /* PassedRelation.swift in Sources */,
+				8654309921B4AA0100C6CC31 /* passedSparkCell.swift in Sources */,
+				8654309621B4A96E00C6CC31 /* Extensions.swift in Sources */,
 				8654308321B42AE900C6CC31 /* AppDelegate.swift in Sources */,
+				8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
