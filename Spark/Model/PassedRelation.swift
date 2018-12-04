@@ -51,3 +51,8 @@ class MessageResponse: Decodable {
     let user_id: String?
     let text: String?
 }
+
+
+struct SingleObject: Decodable {
+    let data: [PassedRelationResponse]
+}

@@ -22,6 +22,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     let cellId = "cellId"
     let imageNames = ["user", "spark", "chat"]
     
+    var homeController: HomeController?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -31,9 +33,34 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         addConstrainsWithFormat(format: "H:|[v0]|", view: collectionView)
         addConstrainsWithFormat(format: "V:|[v0]|", view: collectionView)
         
-//        let selectedIndexPath = NSIndexPath(item: 0, section: 0)
-//        collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: UICollectionViewScrollPosition)
+        setupHorizontalBar()
 
+    }
+    
+    var horizontalBarLeftAnchorConstraint: NSLayoutConstraint?
+    
+    func setupHorizontalBar() {
+        
+        let horizontalBarView = UIView()
+        horizontalBarView.backgroundColor = UIColor.rgb(red: 59, green: 255, blue: 209, alpha: 1)
+        horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(horizontalBarView)
+        
+        horizontalBarLeftAnchorConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
+        
+        horizontalBarLeftAnchorConstraint?.constant = UIScreen.main.bounds.width / 6 - 22
+        
+        horizontalBarLeftAnchorConstraint?.isActive = true
+        horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12).isActive = true
+        horizontalBarView.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        horizontalBarView.heightAnchor.constraint(equalToConstant: 3).isActive = true
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        homeController?.scrollToMenuIndex(menuIndex: indexPath.item)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,7 +101,7 @@ class MenuCell: BaseCell {
     
     override var isHighlighted: Bool {
         didSet {
-            print(123)
+            //print(123)
         }
     }
     
@@ -92,16 +119,12 @@ class MenuCell: BaseCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22).isActive = true
 
-        imageView.widthAnchor.constraint(equalToConstant: 28).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 28).isActive = true
+
+        imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
 
     }
     
 }
-
-
-
-
-

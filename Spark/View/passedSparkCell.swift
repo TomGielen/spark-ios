@@ -45,7 +45,12 @@ class passedSparkCell: BaseCell {
                     return
                 }
                 
-                self.profileImageView.image = UIImage(data: data!)
+                DispatchQueue.global(qos: .userInitiated).async {
+                    DispatchQueue.main.async {
+                        self.profileImageView.image = UIImage(data: data!)
+                    }
+                }
+                
             }.resume()
         }
     }

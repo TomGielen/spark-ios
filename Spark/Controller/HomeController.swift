@@ -8,71 +8,14 @@
 
 import UIKit
 
-struct SingleObject: Decodable {
-    let data: [PassedRelationResponse]
-}
-
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    var passedRelations: [PassedRelation]?
-//        = {
-//        var firstMessage = Message()
-//        firstMessage.text = "Hallo, ik vindt jou leuk"
-//
-//        var firstRelation = PassedRelation()
-//        firstRelation.status = "Rick"
-//        firstRelation._id = ""
-//        return [firstRelation]
-//    }()
     
-    func fetchPassedRelations() {
-        
-        // Proberen database connectie te maken
-        
-        let jsonUrlString = "https://sparklesapi.azurewebsites.net/relation/passed_relation/5bf6daf8f9cd9b0038ee18e2"
-        guard let url = URL(string: jsonUrlString) else { return }
-
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-
-            guard let data = data else { return }
-
-
-            do {
-
-                let singleObject = try JSONDecoder().decode(SingleObject.self, from: data)
-
-
-                let json = singleObject.data
-                
-                self.passedRelations = [PassedRelation]()
-                
-                for dictionary in json {
-                    
-                    let passedRelation = PassedRelation()
-                    passedRelation.name = dictionary.first_user_id?.firstName
-                    passedRelation.userImage = dictionary.first_user_id?.userImage
-                    if(dictionary.messages?.count != 0){
-                        passedRelation.message = dictionary.messages?[0].text
-                    }
-                
-                    self.passedRelations?.append(passedRelation)
-                }
-                
-                self.collectionView?.reloadData()
-                
-            } catch let jsonErr {
-                print("Error serializing json:", jsonErr)
-            }
-
-
-
-            }.resume()
-    }
+    let cellId = "cellId"
+    let tab3CellId = "tab3CellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fetchPassedRelations()
         
         navigationItem.title = "Home"
         navigationController?.navigationBar.isTranslucent = false
@@ -82,18 +25,35 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
         navigationItem.titleView = titleLabel
         
-        collectionView?.backgroundColor = UIColor.white
+        setupCollectionView()
+        setupMenuBar()
+    }
+    
+    func setupCollectionView() {
         
-        collectionView?.register(passedSparkCell.self, forCellWithReuseIdentifier: "cellId")
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .horizontal
+            flowLayout.minimumLineSpacing = 0
+        }
+        
+        collectionView?.backgroundColor = UIColor.white
+        collectionView?.register(TabCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(Tab3Cell.self, forCellWithReuseIdentifier: tab3CellId)
         
         collectionView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
         
-        setupMenuBar()
+        collectionView?.isPagingEnabled = true
     }
     
-    let menuBar: MenuBar = {
+    func scrollToMenuIndex(menuIndex: Int) {
+        let indexPath = IndexPath(item: menuIndex, section: 0)
+        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
+    lazy var menuBar: MenuBar = {
         let mb = MenuBar()
+        mb.homeController = self
         return mb
     }()
     
@@ -103,24 +63,26 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         view.addConstrainsWithFormat(format: "V:[v0(65)]|", view: menuBar)
     }
     
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        menuBar.horizontalBarLeftAnchorConstraint?.constant = scrollView.contentOffset.x / 3 + view.frame.width / 6 - 22
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return passedRelations?.count ?? 0
+        return 3
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! passedSparkCell
         
-        cell.passedRelation = passedRelations?[indexPath.item]
+        if indexPath.item == 1 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: tab3CellId, for: indexPath)
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: view.frame.width, height: 90)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return CGSize.init(width: view.frame.width, height: view.frame.height - 65)
     }
 
 }
