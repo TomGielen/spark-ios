@@ -29,9 +29,24 @@ class passedSparkCell: BaseCell {
         didSet {
             nameLabel.text = passedRelation?.name
             
-            //profileImageView.image = UIImage(named: (passedRelation?.userImage)!)
+            setupUserImage()
             
             messageTextView.text = passedRelation?.message
+        }
+    }
+    
+    func setupUserImage() {
+        if let userImageUrl = passedRelation?.userImage {
+            
+            let url = URL(string: userImageUrl)
+            URLSession.shared.dataTask(with: url!) { (data, response, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                
+                self.profileImageView.image = UIImage(data: data!)
+            }.resume()
         }
     }
     

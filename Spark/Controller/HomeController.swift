@@ -50,6 +50,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     
                     let passedRelation = PassedRelation()
                     passedRelation.name = dictionary.first_user_id?.firstName
+                    passedRelation.userImage = dictionary.first_user_id?.userImage
                     if(dictionary.messages?.count != 0){
                         passedRelation.message = dictionary.messages?[0].text
                     }
