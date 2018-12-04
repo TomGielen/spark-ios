@@ -9,54 +9,63 @@
 import UIKit
 
 struct SingleObject: Decodable {
-    let data: [Data]
-}
-
-struct Data: Decodable {
-    let status: String
-    let _id: String
+    let data: [PassedRelationResponse]
 }
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    var passedRelations: [PassedRelation] = {
-        var firstMessage = Message()
-        firstMessage.text = "Hallo, ik vindt jou leuk"
-        
-        var firstRelation = PassedRelation()
-        firstRelation.name = "Rick"
-        firstRelation.userImage = "bram"
-        firstRelation.message = firstMessage
-        return [firstRelation]
-    }()
+    var passedRelations: [PassedRelation]?
+//        = {
+//        var firstMessage = Message()
+//        firstMessage.text = "Hallo, ik vindt jou leuk"
+//
+//        var firstRelation = PassedRelation()
+//        firstRelation.status = "Rick"
+//        firstRelation._id = ""
+//        return [firstRelation]
+//    }()
     
     func fetchPassedRelations() {
         
         // Proberen database connectie te maken
         
-//        let jsonUrlString = "https://sparklesapi.azurewebsites.net/relation/passed_relation/5bf6daf8f9cd9b0038ee18e2"
-//        guard let url = URL(string: jsonUrlString) else { return }
-//
-//        URLSession.shared.dataTask(with: url) { (data, response, err) in
-//
-//            guard let data = data else { return }
-//
-//
-//            do {
-//
-//                let singleObject = try JSONDecoder().decode(SingleObject.self, from: data)
-//
-//
-//                for dictionary in singleObject.data as! [[String: AnyObject]] {
-//                    print(dictionary["status"])
-//                }
-//            } catch let jsonErr {
-//                print("Error serializing json:", jsonErr)
-//            }
-//
-//
-//
-//            }.resume()
+        let jsonUrlString = "https://sparklesapi.azurewebsites.net/relation/passed_relation/5bf6daf8f9cd9b0038ee18e2"
+        guard let url = URL(string: jsonUrlString) else { return }
+
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+
+            guard let data = data else { return }
+
+
+            do {
+
+                let singleObject = try JSONDecoder().decode(SingleObject.self, from: data)
+
+
+                let json = singleObject.data
+                
+                self.passedRelations = [PassedRelation]()
+                
+                for dictionary in json {
+                    
+                    let passedRelation = PassedRelation()
+                    passedRelation.name = dictionary.first_user_id?.firstName
+                    if(dictionary.messages?.count != 0){
+                        passedRelation.message = dictionary.messages?[0].text
+                    }
+                
+                    self.passedRelations?.append(passedRelation)
+                }
+                
+                self.collectionView?.reloadData()
+                
+            } catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+
+
+
+            }.resume()
     }
     
     override func viewDidLoad() {
@@ -91,17 +100,16 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         view.addSubview(menuBar)
         view.addConstrainsWithFormat(format: "H:|[v0]|", view: menuBar)
         view.addConstrainsWithFormat(format: "V:[v0(65)]|", view: menuBar)
-
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return passedRelations.count
+        return passedRelations?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! passedSparkCell
         
-        cell.passedRelation = passedRelations[indexPath.item]
+        cell.passedRelation = passedRelations?[indexPath.item]
         
         return cell
     }

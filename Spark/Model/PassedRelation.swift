@@ -16,7 +16,7 @@ class PassedRelation: NSObject {
     var first_user_id: User?
     var second_user_id: User?
     
-    var message: Message?
+    var message: String?
     
 }
 
@@ -30,3 +30,24 @@ class Message: NSObject {
     var text: String?
 }
 
+struct PassedRelationResponse: Decodable {
+    
+    let _id: String?
+    let status: String?
+    
+    let first_user_id: UserResponse?
+    let second_user_id: UserResponse?
+    
+    let messages: [MessageResponse]?
+    
+}
+
+class UserResponse: Decodable {
+    let firstName: String?
+    let userImage: String?
+}
+
+class MessageResponse: Decodable {
+    let user_id: String?
+    let text: String?
+}

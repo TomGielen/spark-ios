@@ -29,9 +29,9 @@ class passedSparkCell: BaseCell {
         didSet {
             nameLabel.text = passedRelation?.name
             
-            profileImageView.image = UIImage(named: (passedRelation?.userImage)!)
+            //profileImageView.image = UIImage(named: (passedRelation?.userImage)!)
             
-            messageTextView.text = passedRelation?.message?.text
+            messageTextView.text = passedRelation?.message
         }
     }
     
