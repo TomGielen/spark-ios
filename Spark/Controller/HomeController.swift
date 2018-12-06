@@ -25,8 +25,21 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
         navigationItem.titleView = titleLabel
         
+
+        checkIfUserIsloggedin()
         setupCollectionView()
         setupMenuBar()
+    }
+    
+    
+    func checkIfUserIsloggedin() {
+        let login = false
+        
+        if(!login){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "onboarding_intro") as! OnboardingIntroViewController
+        self.present(nextViewController, animated:true, completion:nil)
+        }
     }
     
     func setupCollectionView() {

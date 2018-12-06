@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */; };
+		837352F421B94C1A00D1B159 /* SEGOEUI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 837352F321B94C0400D1B159 /* SEGOEUI.TTF */; };
+		837352F621B94CDA00D1B159 /* segoe-ui-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 837352F521B94CDA00D1B159 /* segoe-ui-bold.ttf */; };
+		837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */; };
 		8623628521B537B000DFCA94 /* PassedRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8623628421B537B000DFCA94 /* PassedRelation.swift */; };
 		8654308321B42AE900C6CC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654308221B42AE900C6CC31 /* AppDelegate.swift */; };
 		8654308521B42AE900C6CC31 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654308421B42AE900C6CC31 /* HomeController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntroViewController.swift; sourceTree = "<group>"; };
+		837352F321B94C0400D1B159 /* SEGOEUI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = SEGOEUI.TTF; path = "../../../../../Downloads/segoe-ui/SEGOEUI.TTF"; sourceTree = "<group>"; };
+		837352F521B94CDA00D1B159 /* segoe-ui-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "segoe-ui-bold.ttf"; path = "../../../../../Downloads/segoe-ui-bold.ttf"; sourceTree = "<group>"; };
+		837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNameViewController.swift; sourceTree = "<group>"; };
 		8623628421B537B000DFCA94 /* PassedRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassedRelation.swift; sourceTree = "<group>"; };
 		8654307F21B42AE900C6CC31 /* Spark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8654308221B42AE900C6CC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		837352EE21B7F4B200D1B159 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */,
+				837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		837352F221B94BE000D1B159 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				837352F321B94C0400D1B159 /* SEGOEUI.TTF */,
+				837352F521B94CDA00D1B159 /* segoe-ui-bold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		8623628321B5379400DFCA94 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +102,8 @@
 		8654308121B42AE900C6CC31 /* Spark */ = {
 			isa = PBXGroup;
 			children = (
+				837352F221B94BE000D1B159 /* fonts */,
+				837352EE21B7F4B200D1B159 /* onboarding */,
 				8680874121B70FB300B57133 /* ApiService */,
 				8623628321B5379400DFCA94 /* Model */,
 				8654309A21B4AA6800C6CC31 /* Controller */,
@@ -183,9 +211,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837352F421B94C1A00D1B159 /* SEGOEUI.TTF in Resources */,
 				8654308D21B42AEC00C6CC31 /* LaunchScreen.storyboard in Resources */,
 				8654308A21B42AEC00C6CC31 /* Assets.xcassets in Resources */,
 				8654308821B42AE900C6CC31 /* Main.storyboard in Resources */,
+				837352F621B94CDA00D1B159 /* segoe-ui-bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +233,9 @@
 				8654309921B4AA0100C6CC31 /* passedSparkCell.swift in Sources */,
 				8654309621B4A96E00C6CC31 /* Extensions.swift in Sources */,
 				8654308321B42AE900C6CC31 /* AppDelegate.swift in Sources */,
+				837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */,
 				8680874321B70FEC00B57133 /* ApiService.swift in Sources */,
+				837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */,
 				8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PB9TKER99Y;
 				INFOPLIST_FILE = Spark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -357,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SparkInc.Spark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -366,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PB9TKER99Y;
 				INFOPLIST_FILE = Spark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,7 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SparkInc.Spark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
