@@ -8,11 +8,10 @@
 
 import UIKit
 
-class OnboardingNameViewController: UIViewController {
+class OnboardingNameViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var NameInputField: UITextField!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,34 +19,35 @@ class OnboardingNameViewController: UIViewController {
         titleLabel.text = "SPARK"
         titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
         navigationItem.titleView = titleLabel
-        
-        NameInputField.addShadowToTextField(cornerRadius: 22.5)
-        NameInputField.addShadowToTextField(color: UIColor.black, cornerRadius: 22.5)
-        NameInputField.becomeFirstResponder()
-        NameInputField.setLeftPaddingPoints(10)
-        
-        // Do any additional setup after loading the view.
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    override func viewDidAppear(_ animated: Bool) {
+        NameInputField.becomeFirstResponder()
+        NameInputField.addShadowToTextField(cornerRadius: 22.5)
+        NameInputField.addShadowToTextField(color: UIColor.black, cornerRadius: 22.5)
+        NameInputField.setLeftPaddingPoints(10)
+    }
         
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+       // self.view.endEditing(true);
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        //or
-        //self.view.endEditing(true)
         return true
     }
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension UITextField {
@@ -63,17 +63,17 @@ extension UITextField {
         self.layer.cornerRadius = cornerRadius
         
     }
-}
-
-extension UITextField {
+    
     func setLeftPaddingPoints(_ amount:CGFloat){
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         self.leftView = paddingView
         self.leftViewMode = .always
     }
+    
     func setRightPaddingPoints(_ amount:CGFloat) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         self.rightView = paddingView
         self.rightViewMode = .always
     }
+    
 }
