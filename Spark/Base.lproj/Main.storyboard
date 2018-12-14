@@ -259,6 +259,9 @@
                                 <state key="normal" title="CONTINUE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hZc-YE-mNE" kind="show" id="zGg-2S-LVo"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="What's your gender?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAd-m1-j80">
                                 <rect key="frame" x="40" y="130" width="295" height="128"/>
@@ -373,6 +376,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqb-Ip-W1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2285.5999999999999" y="823.53823088455783"/>
+        </scene>
+        <!--Onboarding Preference View Controller-->
+        <scene sceneID="JxV-Gz-qNY">
+            <objects>
+                <viewController storyboardIdentifier="onboarding_preference" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hZc-YE-mNE" customClass="OnboardingPreferenceViewController" customModule="Spark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bVK-p1-l1J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-hm-dFU">
+                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="1" blue="0.81960784310000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="LYr-RL-dNZ"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="L7Z-jY-3GI"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's your preference?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YNm-D7-1lV">
+                                <rect key="frame" x="40" y="130" width="295" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="iRX-7A-qDJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkv-ZA-NBu">
+                                <rect key="frame" x="40" y="268" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="NHF-j2-iyG"/>
+                                    <constraint firstAttribute="height" constant="120" id="goC-m6-fGN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="26"/>
+                                <state key="normal" title="Male">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="MalePrefClick:" destination="hZc-YE-mNE" eventType="touchUpInside" id="6gu-O6-vmt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObI-AT-TwL">
+                                <rect key="frame" x="215" y="268" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="IwJ-sO-mqe"/>
+                                    <constraint firstAttribute="height" constant="120" id="Ssz-NA-uyB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="26"/>
+                                <state key="normal" title="Female">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="femalePrefClick:" destination="hZc-YE-mNE" eventType="touchUpInside" id="SE2-Gq-KT1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uks-Iu-yND" firstAttribute="trailing" secondItem="YNm-D7-1lV" secondAttribute="trailing" constant="40" id="4Ay-bm-Gzq"/>
+                            <constraint firstItem="bkv-ZA-NBu" firstAttribute="top" secondItem="YNm-D7-1lV" secondAttribute="bottom" constant="10" id="FN5-ck-Xop"/>
+                            <constraint firstItem="ObI-AT-TwL" firstAttribute="leading" secondItem="bkv-ZA-NBu" secondAttribute="trailing" constant="55" id="Jrk-ss-ryJ"/>
+                            <constraint firstItem="r6r-hm-dFU" firstAttribute="bottom" secondItem="Uks-Iu-yND" secondAttribute="bottom" id="Rfx-V6-6kx"/>
+                            <constraint firstItem="YNm-D7-1lV" firstAttribute="leading" secondItem="Uks-Iu-yND" secondAttribute="leading" constant="40" id="aQq-NU-W0U"/>
+                            <constraint firstItem="bkv-ZA-NBu" firstAttribute="leading" secondItem="Uks-Iu-yND" secondAttribute="leading" constant="40" id="htb-XR-c1G"/>
+                            <constraint firstItem="ObI-AT-TwL" firstAttribute="leading" secondItem="bkv-ZA-NBu" secondAttribute="trailing" constant="55" id="j7O-hb-J3c"/>
+                            <constraint firstItem="r6r-hm-dFU" firstAttribute="leading" secondItem="Uks-Iu-yND" secondAttribute="leading" id="mOF-Ja-Ig5"/>
+                            <constraint firstItem="ObI-AT-TwL" firstAttribute="top" secondItem="YNm-D7-1lV" secondAttribute="bottom" constant="10" id="pAP-kB-ecp"/>
+                            <constraint firstItem="YNm-D7-1lV" firstAttribute="top" secondItem="Uks-Iu-yND" secondAttribute="top" constant="110" id="uP3-Ob-hy0"/>
+                            <constraint firstItem="Uks-Iu-yND" firstAttribute="trailing" secondItem="ObI-AT-TwL" secondAttribute="trailing" constant="40" id="uq1-Yc-oPX"/>
+                            <constraint firstItem="r6r-hm-dFU" firstAttribute="trailing" secondItem="Uks-Iu-yND" secondAttribute="trailing" id="xrK-0z-w7d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uks-Iu-yND"/>
+                    </view>
+                    <connections>
+                        <outlet property="femalePrefButton" destination="ObI-AT-TwL" id="1Tz-zm-ljF"/>
+                        <outlet property="malePrefButton" destination="bkv-ZA-NBu" id="OGR-s0-Bpa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugn-ty-fG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3010" y="824"/>
         </scene>
     </scenes>
 </document>
