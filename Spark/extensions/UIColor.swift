@@ -14,6 +14,7 @@ extension UIColor {
     // Setup custom colours we can use throughout the app using hex values
     static let sparkGreen = UIColor(hex: 0x03BFFD1)
     static let backgroundGrey = UIColor(hex: 0xF9F9F9)
+    static let disabledGrey = UIColor(hex: 0x8B8B8B)
     //static let rgbRed = UIColor(red: 255, green: 0, blue: 0)
     
     // Create a UIColor from RGB

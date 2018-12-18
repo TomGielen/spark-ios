@@ -10,6 +10,7 @@ import UIKit
 
 class OnboardingNameViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var NameInputField: UITextField!
     
     override func viewDidLoad() {
@@ -37,6 +38,10 @@ class OnboardingNameViewController: UIViewController, UITextFieldDelegate {
            textField.resignFirstResponder()
         }
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+       btn.backgroundColor = UIColor.sparkGreen
     }
     
     

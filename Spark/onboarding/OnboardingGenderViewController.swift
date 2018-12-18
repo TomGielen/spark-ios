@@ -10,12 +10,18 @@ import UIKit
 
 class OnboardingGenderViewController: UIViewController {
     
+    @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var femaleButton: UIButton!
     public var gender : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 64, height: view.frame.height + 10))
+        titleLabel.text = "SPARK"
+        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
+        navigationItem.titleView = titleLabel
         
     }
     
@@ -24,6 +30,7 @@ class OnboardingGenderViewController: UIViewController {
         if (gender == "female"){
             femaleButton.borderColor = UIColor.backgroundGrey
         }
+        btn.backgroundColor = UIColor.sparkGreen
         gender = "male"
     }
     
@@ -32,6 +39,7 @@ class OnboardingGenderViewController: UIViewController {
         if (gender == "male"){
         maleButton.borderColor  = UIColor.backgroundGrey
         }
+        btn.backgroundColor = UIColor.sparkGreen
         gender = "female"
     }
     

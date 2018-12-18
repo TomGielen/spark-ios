@@ -11,6 +11,7 @@ import UIKit
 class OnboardingAgeViewController: UIViewController, UITextFieldDelegate {
     
     
+    @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var day: UITextField!
     @IBOutlet weak var month: UITextField!
     @IBOutlet weak var year: UITextField!
@@ -18,11 +19,10 @@ class OnboardingAgeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 64, height: view.frame.height + 10))
-//        titleLabel.text = "SPARK"
-//        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
-//        navigationItem.titleView = titleLabel
-        // Do any additional setup after loading the view.
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 64, height: view.frame.height + 10))
+        titleLabel.text = "SPARK"
+        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
+        navigationItem.titleView = titleLabel
         
         day.addShadowToTextField(cornerRadius: 22.5)
         day.addShadowToTextField(color: UIColor.black, cornerRadius: 22.5)
@@ -57,6 +57,7 @@ class OnboardingAgeViewController: UIViewController, UITextFieldDelegate {
         if textField === year{
             if (txtAfterUpdate.count == 5){
                  self.view.endEditing(true);
+                btn.backgroundColor = UIColor.sparkGreen
             }
         }
         return true;
