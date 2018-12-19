@@ -10,8 +10,6 @@
 		665D6C70476D9FA6626711DA /* Pods_Spark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */; };
 		830E6C7D21C92F0900010D71 /* OnboardingImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */; };
 		837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */; };
-		837352F421B94C1A00D1B159 /* SEGOEUI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 837352F321B94C0400D1B159 /* SEGOEUI.TTF */; };
-		837352F621B94CDA00D1B159 /* segoe-ui-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 837352F521B94CDA00D1B159 /* segoe-ui-bold.ttf */; };
 		837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */; };
 		837352FA21C1341B00D1B159 /* OnboardingAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */; };
 		837352FF21C2A34100D1B159 /* UITextField+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352FE21C2A34100D1B159 /* UITextField+custom.swift */; };
@@ -31,14 +29,14 @@
 		8680874321B70FEC00B57133 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874221B70FEC00B57133 /* ApiService.swift */; };
 		8680874521B7219A00B57133 /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874421B7219A00B57133 /* TabCell.swift */; };
 		8680874721B72E7400B57133 /* Tab3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874621B72E7400B57133 /* Tab3Cell.swift */; };
+		86A5B3F021CA53C50081F9EF /* segoe-ui-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86A5B3EF21CA53C50081F9EF /* segoe-ui-bold.ttf */; };
+		86A5B3F221CA53E10081F9EF /* SEGOEUI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 86A5B3F121CA53E10081F9EF /* SEGOEUI.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		025602FF2EEB9C4521736538 /* Pods-Spark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.debug.xcconfig"; sourceTree = "<group>"; };
 		830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageViewController.swift; sourceTree = "<group>"; };
 		837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntroViewController.swift; sourceTree = "<group>"; };
-		837352F321B94C0400D1B159 /* SEGOEUI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = SEGOEUI.TTF; path = "../../../../../Downloads/segoe-ui/SEGOEUI.TTF"; sourceTree = "<group>"; };
-		837352F521B94CDA00D1B159 /* segoe-ui-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "segoe-ui-bold.ttf"; path = "../../../../../Downloads/segoe-ui-bold.ttf"; sourceTree = "<group>"; };
 		837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNameViewController.swift; sourceTree = "<group>"; };
 		837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAgeViewController.swift; sourceTree = "<group>"; };
 		837352FE21C2A34100D1B159 /* UITextField+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+custom.swift"; sourceTree = "<group>"; };
@@ -60,6 +58,8 @@
 		8680874221B70FEC00B57133 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		8680874421B7219A00B57133 /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		8680874621B72E7400B57133 /* Tab3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3Cell.swift; sourceTree = "<group>"; };
+		86A5B3EF21CA53C50081F9EF /* segoe-ui-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "segoe-ui-bold.ttf"; path = "Spark/Downloads/segoe-ui/segoe-ui-bold.ttf"; sourceTree = SOURCE_ROOT; };
+		86A5B3F121CA53E10081F9EF /* SEGOEUI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = SEGOEUI.TTF; path = "Spark/Downloads/segoe-ui/SEGOEUI.TTF"; sourceTree = SOURCE_ROOT; };
 		FC2D6A30DE53C0247CAC3D31 /* Pods-Spark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.release.xcconfig"; sourceTree = "<group>"; };
 		FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,8 +109,8 @@
 		837352F221B94BE000D1B159 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				837352F321B94C0400D1B159 /* SEGOEUI.TTF */,
-				837352F521B94CDA00D1B159 /* segoe-ui-bold.ttf */,
+				86A5B3EF21CA53C50081F9EF /* segoe-ui-bold.ttf */,
+				86A5B3F121CA53E10081F9EF /* SEGOEUI.TTF */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -270,11 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837352F421B94C1A00D1B159 /* SEGOEUI.TTF in Resources */,
+				86A5B3F021CA53C50081F9EF /* segoe-ui-bold.ttf in Resources */,
 				8654308D21B42AEC00C6CC31 /* LaunchScreen.storyboard in Resources */,
 				8654308A21B42AEC00C6CC31 /* Assets.xcassets in Resources */,
+				86A5B3F221CA53E10081F9EF /* SEGOEUI.TTF in Resources */,
 				8654308821B42AE900C6CC31 /* Main.storyboard in Resources */,
-				837352F621B94CDA00D1B159 /* segoe-ui-bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
