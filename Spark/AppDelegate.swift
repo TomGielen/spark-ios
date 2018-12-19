@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let layout = UICollectionViewFlowLayout()
         window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
         
-        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = UIColor.backgroundGrey
+        UINavigationBar.appearance().tintColor = UIColor.black
         UINavigationBar.appearance().shadowImage = UIImage()
 
         

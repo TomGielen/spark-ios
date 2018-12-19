@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830E6C7D21C92F0900010D71 /* OnboardingImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */; };
 		837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */; };
 		837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */; };
+		837352FA21C1341B00D1B159 /* OnboardingAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */; };
+		837352FF21C2A34100D1B159 /* UITextField+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352FE21C2A34100D1B159 /* UITextField+custom.swift */; };
+		8373530121C2C3C700D1B159 /* OnboardingGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530021C2C3C700D1B159 /* OnboardingGenderViewController.swift */; };
+		8373530321C2C6FD00D1B159 /* UIView+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530221C2C6FD00D1B159 /* UIView+custom.swift */; };
+		8373530521C4011800D1B159 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530421C4011800D1B159 /* UIColor.swift */; };
+		8373530721C41CB400D1B159 /* OnboardingPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530621C41CB300D1B159 /* OnboardingPreferenceViewController.swift */; };
 		8623628521B537B000DFCA94 /* PassedRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8623628421B537B000DFCA94 /* PassedRelation.swift */; };
 		8654308321B42AE900C6CC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654308221B42AE900C6CC31 /* AppDelegate.swift */; };
 		8654308521B42AE900C6CC31 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654308421B42AE900C6CC31 /* HomeController.swift */; };
@@ -26,8 +33,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageViewController.swift; sourceTree = "<group>"; };
 		837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntroViewController.swift; sourceTree = "<group>"; };
 		837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNameViewController.swift; sourceTree = "<group>"; };
+		837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAgeViewController.swift; sourceTree = "<group>"; };
+		837352FE21C2A34100D1B159 /* UITextField+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+custom.swift"; sourceTree = "<group>"; };
+		8373530021C2C3C700D1B159 /* OnboardingGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGenderViewController.swift; sourceTree = "<group>"; };
+		8373530221C2C6FD00D1B159 /* UIView+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+custom.swift"; sourceTree = "<group>"; };
+		8373530421C4011800D1B159 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8373530621C41CB300D1B159 /* OnboardingPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPreferenceViewController.swift; sourceTree = "<group>"; };
 		8623628421B537B000DFCA94 /* PassedRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassedRelation.swift; sourceTree = "<group>"; };
 		8654307F21B42AE900C6CC31 /* Spark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8654308221B42AE900C6CC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +76,10 @@
 			children = (
 				837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */,
 				837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */,
+				837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */,
+				8373530021C2C3C700D1B159 /* OnboardingGenderViewController.swift */,
+				8373530621C41CB300D1B159 /* OnboardingPreferenceViewController.swift */,
+				830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -73,6 +91,16 @@
 				86D334CA21C1517000CF334D /* SEGOEUI.TTF */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		837352FD21C2A31300D1B159 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				837352FE21C2A34100D1B159 /* UITextField+custom.swift */,
+				8373530221C2C6FD00D1B159 /* UIView+custom.swift */,
+				8373530421C4011800D1B159 /* UIColor.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		8623628321B5379400DFCA94 /* Model */ = {
@@ -102,8 +130,9 @@
 		8654308121B42AE900C6CC31 /* Spark */ = {
 			isa = PBXGroup;
 			children = (
-				837352F221B94BE000D1B159 /* Fonts */,
-				837352EE21B7F4B200D1B159 /* Onboarding */,
+				837352FD21C2A31300D1B159 /* extensions */,
+				837352F221B94BE000D1B159 /* fonts */,
+				837352EE21B7F4B200D1B159 /* onboarding */,
 				8680874121B70FB300B57133 /* ApiService */,
 				8623628321B5379400DFCA94 /* Model */,
 				8654309A21B4AA6800C6CC31 /* Controller */,
@@ -179,6 +208,10 @@
 		8654307721B42AE900C6CC31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Spark Inc.";
@@ -230,13 +263,20 @@
 				8680874721B72E7400B57133 /* Tab3Cell.swift in Sources */,
 				8680874521B7219A00B57133 /* TabCell.swift in Sources */,
 				8623628521B537B000DFCA94 /* PassedRelation.swift in Sources */,
+				8373530121C2C3C700D1B159 /* OnboardingGenderViewController.swift in Sources */,
+				8373530521C4011800D1B159 /* UIColor.swift in Sources */,
 				8654309921B4AA0100C6CC31 /* passedSparkCell.swift in Sources */,
+				837352FA21C1341B00D1B159 /* OnboardingAgeViewController.swift in Sources */,
 				8654309621B4A96E00C6CC31 /* Extensions.swift in Sources */,
+				830E6C7D21C92F0900010D71 /* OnboardingImageViewController.swift in Sources */,
+				8373530321C2C6FD00D1B159 /* UIView+custom.swift in Sources */,
 				8654308321B42AE900C6CC31 /* AppDelegate.swift in Sources */,
 				837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */,
 				8680874321B70FEC00B57133 /* ApiService.swift in Sources */,
+				8373530721C41CB400D1B159 /* OnboardingPreferenceViewController.swift in Sources */,
 				837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */,
 				8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */,
+				837352FF21C2A34100D1B159 /* UITextField+custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
