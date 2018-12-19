@@ -43,5 +43,16 @@ class OnboardingGenderViewController: UIViewController {
         gender = "female"
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "genderToPref" {
+            if (gender.isEmpty) {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
     
 }

@@ -15,6 +15,7 @@ class OnboardingAgeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var day: UITextField!
     @IBOutlet weak var month: UITextField!
     @IBOutlet weak var year: UITextField!
+    public var editingEnd : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +58,22 @@ class OnboardingAgeViewController: UIViewController, UITextFieldDelegate {
         if textField === year{
             if (txtAfterUpdate.count == 5){
                  self.view.endEditing(true);
+                editingEnd = true
                 btn.backgroundColor = UIColor.sparkGreen
             }
         }
         return true;
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "ageToGender" {
+            if (!editingEnd) {
+                return false
+            }
+        }
+        
+        return true
     }
     
     

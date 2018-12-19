@@ -168,7 +168,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GkJ-tm-wgS" kind="show" id="Hrt-Gn-UL3"/>
+                                    <segue destination="GkJ-tm-wgS" kind="show" identifier="ageToGender" id="Hrt-Gn-UL3"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="DD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngP-6S-M2x">
@@ -268,7 +268,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hZc-YE-mNE" kind="show" id="zGg-2S-LVo"/>
+                                    <segue destination="hZc-YE-mNE" kind="show" identifier="genderToPref" id="zGg-2S-LVo"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="What's your gender?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAd-m1-j80">
@@ -406,7 +406,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="p7R-jQ-6i6" kind="show" id="yVg-fU-sHB"/>
+                                    <segue destination="p7R-jQ-6i6" kind="show" identifier="prefToImage" id="yVg-fU-sHB"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="What's your preference?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YNm-D7-1lV">
@@ -628,7 +628,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I6e-Gt-Zcv"/>
+        <segue reference="Hrt-Gn-UL3"/>
         <segue reference="X9k-gd-Mbv"/>
         <segue reference="xfb-RU-axE"/>
     </inferredMetricsTieBreakers>

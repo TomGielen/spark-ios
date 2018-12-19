@@ -44,4 +44,15 @@ class OnboardingPreferenceViewController: UIViewController {
         btn.backgroundColor = UIColor.sparkGreen
         preference = "female"
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "prefToImage" {
+            if (preference.isEmpty) {
+                return false
+            }
+        }
+        
+        return true
+    }
 }

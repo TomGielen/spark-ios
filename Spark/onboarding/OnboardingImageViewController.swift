@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import NSFWDetector
 
 class OnboardingImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
@@ -38,6 +39,21 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            if #available(iOS 12.0, *) {
+                NSFWDetector.shared.check(image: image) { result in
+                    switch result {
+                    case .error:
+                        print("Detection failed")
+                    case let .success(nsfwConfidence: confidence):
+                       print(String(format: "%.1f %% porn", confidence * 100.0))
+                    }
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            
+            
             profile_ImageView.clipsToBounds = true
             profile_ImageView.image = image
             btn.backgroundColor = UIColor.sparkGreen

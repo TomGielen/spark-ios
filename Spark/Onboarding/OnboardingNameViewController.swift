@@ -40,8 +40,30 @@ class OnboardingNameViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-       btn.backgroundColor = UIColor.sparkGreen
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        print("startedTyping")
+//    }
+   
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("ended editing")
+          btn.backgroundColor = UIColor.sparkGreen
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "nameToAge" {
+            if (NameInputField.text?.isEmpty)! {
+//                let alertController = UIAlertController(
+//                    title: "Alert",
+//                    message: "No valid imput",
+//                    preferredStyle: .alert
+//                )
+//                present(alertController, animated: true, completion: nil)
+                return false
+            }
+        }
+        
+        return true
     }
     
     
