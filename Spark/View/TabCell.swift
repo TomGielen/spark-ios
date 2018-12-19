@@ -23,8 +23,6 @@ class TabCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, U
     
     let cellId = "cellId"
     
-    
-    
     func fetchPassedRelations() {
         ApiService.sharedInstance.fetchPassedRelations { (passedRelations: [PassedRelation]) in
             

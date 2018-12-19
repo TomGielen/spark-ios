@@ -33,7 +33,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     
     func checkIfUserIsloggedin() {
-        let login = false
+        let login = true
         
         if(!login){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
