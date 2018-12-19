@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		665D6C70476D9FA6626711DA /* Pods_Spark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */; };
 		830E6C7D21C92F0900010D71 /* OnboardingImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */; };
 		837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */; };
 		837352F421B94C1A00D1B159 /* SEGOEUI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 837352F321B94C0400D1B159 /* SEGOEUI.TTF */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		025602FF2EEB9C4521736538 /* Pods-Spark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.debug.xcconfig"; sourceTree = "<group>"; };
 		830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageViewController.swift; sourceTree = "<group>"; };
 		837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntroViewController.swift; sourceTree = "<group>"; };
 		837352F321B94C0400D1B159 /* SEGOEUI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = SEGOEUI.TTF; path = "../../../../../Downloads/segoe-ui/SEGOEUI.TTF"; sourceTree = "<group>"; };
@@ -58,6 +60,8 @@
 		8680874221B70FEC00B57133 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		8680874421B7219A00B57133 /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		8680874621B72E7400B57133 /* Tab3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3Cell.swift; sourceTree = "<group>"; };
+		FC2D6A30DE53C0247CAC3D31 /* Pods-Spark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.release.xcconfig"; sourceTree = "<group>"; };
+		FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +69,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665D6C70476D9FA6626711DA /* Pods_Spark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137220911557ADF521BA1A29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EDA1DF103F56C24319C48C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				025602FF2EEB9C4521736538 /* Pods-Spark.debug.xcconfig */,
+				FC2D6A30DE53C0247CAC3D31 /* Pods-Spark.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		837352EE21B7F4B200D1B159 /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +138,8 @@
 			children = (
 				8654308121B42AE900C6CC31 /* Spark */,
 				8654308021B42AE900C6CC31 /* Products */,
+				1EDA1DF103F56C24319C48C0 /* Pods */,
+				137220911557ADF521BA1A29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8654309121B42AEC00C6CC31 /* Build configuration list for PBXNativeTarget "Spark" */;
 			buildPhases = (
+				9B4045D38F22AA2752FFA712 /* [CP] Check Pods Manifest.lock */,
 				8654307B21B42AE900C6CC31 /* Sources */,
 				8654307C21B42AE900C6CC31 /* Frameworks */,
 				8654307D21B42AE900C6CC31 /* Resources */,
+				825491F609D9405673C20892 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +279,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		825491F609D9405673C20892 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Spark/Pods-Spark-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+				"${BUILT_PRODUCTS_DIR}/NSFWDetector/NSFWDetector.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSFWDetector.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spark/Pods-Spark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B4045D38F22AA2752FFA712 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8654307B21B42AE900C6CC31 /* Sources */ = {
@@ -418,6 +493,7 @@
 		};
 		8654309221B42AEC00C6CC31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 025602FF2EEB9C4521736538 /* Pods-Spark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -436,6 +512,7 @@
 		};
 		8654309321B42AEC00C6CC31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC2D6A30DE53C0247CAC3D31 /* Pods-Spark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

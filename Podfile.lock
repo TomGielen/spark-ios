@@ -1,0 +1,20 @@
+PODS:
+  - Disk (0.4.0)
+  - NSFWDetector (1.1.0)
+
+DEPENDENCIES:
+  - Disk (~> 0.4.0)
+  - NSFWDetector
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Disk
+    - NSFWDetector
+
+SPEC CHECKSUMS:
+  Disk: ef2956657d5bb56034b38b29b352170165226440
+  NSFWDetector: aefec2254932bdc933cccc9385abfe07ae36a7a1
+
+PODFILE CHECKSUM: 0c42a9a69185c1c1881875e1239044ae9a2aafd6
+
+COCOAPODS: 1.5.3
