@@ -72,7 +72,10 @@ class OnboardingAgeViewController: UIViewController, UITextFieldDelegate {
                 return false
             }
         }
-        
+           day.text
+            month.text
+            year.text
+        UserDefaults.standard.set(NameInputField.text, forKey: "name")
         return true
     }
     

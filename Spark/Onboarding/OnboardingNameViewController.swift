@@ -62,7 +62,8 @@ class OnboardingNameViewController: UIViewController, UITextFieldDelegate {
                 return false
             }
         }
-        
+        UserDefaults.standard.set(NameInputField.text, forKey: "name")
+
         return true
     }
     
