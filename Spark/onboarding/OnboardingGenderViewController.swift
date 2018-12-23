@@ -51,6 +51,9 @@ class OnboardingGenderViewController: UIViewController {
             }
         }
         
+        UserDefaults.standard.set(gender, forKey: "gender")
+
+        
         return true
     }
     

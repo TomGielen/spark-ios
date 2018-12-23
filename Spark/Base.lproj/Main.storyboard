@@ -541,6 +541,9 @@
                                 <state key="normal" title="CONTINUE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerAccountAndFinishOnboarding:" destination="p7R-jQ-6i6" eventType="touchUpInside" id="RZp-7i-0Mk"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gff-9D-M2C">
                                 <rect key="frame" x="40" y="143" width="295" height="394"/>

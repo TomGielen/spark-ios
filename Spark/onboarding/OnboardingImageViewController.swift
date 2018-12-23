@@ -15,6 +15,7 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
     
     @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var profile_ImageView: UIImageView!
+    public var userImage: UIImage? = nil
     
     var imagePicker = UIImagePickerController()
     
@@ -56,11 +57,25 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
             
             profile_ImageView.clipsToBounds = true
             profile_ImageView.image = image
+            userImage = image
             btn.backgroundColor = UIColor.sparkGreen
         }
         
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBAction func registerAccountAndFinishOnboarding(_ sender: Any) {
+    
+        let deviceID = UIDevice.current.identifierForVendor?.uuidString
+        let name = UserDefaults.standard.string(forKey: "name")
+        let dateOfBirth = UserDefaults.standard.string(forKey: "dateOfBirth")
+        let gender = UserDefaults.standard.string(forKey: "gender")
+        let preference = UserDefaults.standard.string(forKey: "preference")
+        
+    
+    }
+    
     
 }
 

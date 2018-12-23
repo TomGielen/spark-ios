@@ -53,6 +53,9 @@ class OnboardingPreferenceViewController: UIViewController {
             }
         }
         
+        UserDefaults.standard.set(preference, forKey: "preference")
+
+        
         return true
     }
 }

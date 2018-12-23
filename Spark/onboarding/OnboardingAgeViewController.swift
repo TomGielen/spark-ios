@@ -72,10 +72,16 @@ class OnboardingAgeViewController: UIViewController, UITextFieldDelegate {
                 return false
             }
         }
-           day.text
-            month.text
-            year.text
-        UserDefaults.standard.set(NameInputField.text, forKey: "name")
+        
+        let c = NSDateComponents()
+        c.day = Int(day.text!)!
+        c.month = Int(month.text!)!
+        c.year = Int(year.text!)!
+        
+        let date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: c as DateComponents)
+
+        UserDefaults.standard.set(date, forKey: "dateOfBirth")
+        
         return true
     }
     
