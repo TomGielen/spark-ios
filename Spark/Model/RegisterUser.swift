@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class RegisterUser: NSObject {
+struct RegisterUser: Codable {
     var device_id: String?
     var gender: String?
     var preference: String?

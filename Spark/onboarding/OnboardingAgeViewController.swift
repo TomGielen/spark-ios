@@ -79,7 +79,6 @@ class OnboardingAgeViewController: UIViewController, UITextFieldDelegate {
         c.year = Int(year.text!)!
         
         let date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: c as DateComponents)
-
         UserDefaults.standard.set(date, forKey: "dateOfBirth")
         
         return true
