@@ -26,7 +26,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.titleView = titleLabel
         
 
-        checkIfUserIsloggedin()
+        // checkIfUserIsloggedin()
         setupCollectionView()
         setupMenuBar()
     }
