@@ -69,11 +69,18 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
     
         let deviceID = UIDevice.current.identifierForVendor?.uuidString
         let name = UserDefaults.standard.string(forKey: "name")
-        let dateOfBirth = UserDefaults.standard.string(forKey: "dateOfBirth")
+        let dateOfBirth = UserDefaults.standard.object(forKey: "dateOfBirth") as! Date
         let gender = UserDefaults.standard.string(forKey: "gender")
         let preference = UserDefaults.standard.string(forKey: "preference")
         
-    
+        let newRegisterUser = RegisterUser()
+        newRegisterUser.date_of_birth = dateOfBirth
+        newRegisterUser.device_id = deviceID
+        newRegisterUser.firstName = name
+        newRegisterUser.gender = gender
+        newRegisterUser.preference = preference
+        //newRegisterUser.UserImage = userImage
+        
     }
     
     

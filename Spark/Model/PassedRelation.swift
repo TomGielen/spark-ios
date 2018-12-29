@@ -56,3 +56,5 @@ class MessageResponse: Decodable {
 struct SingleObject: Decodable {
     let data: [PassedRelationResponse]
 }
+
+
