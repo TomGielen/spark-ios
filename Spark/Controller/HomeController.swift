@@ -33,9 +33,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     
     func checkIfUserIsloggedin() {
-        let login = false
+        let name = UserDefaults.standard.bool(forKey: "FinishedOnboarding")
         
-        if(!login){
+        if(!name){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "onboarding_nav") as! UINavigationController
         self.present(nextViewController, animated:true, completion:nil)

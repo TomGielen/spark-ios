@@ -15,6 +15,23 @@ struct RegisterUser: Codable {
     var gender: String?
     var preference: String?
     var firstName: String?
-    var UserImage: String?
+    var userImage: String?
     var date_of_birth: Date?
+}
+
+struct RegisterUserResult: Decodable {
+    var result : RegisterUserResponse
+}
+
+struct RegisterUserResponse: Decodable {
+    var device_id: String
+    var gender: String
+    var preference: String
+    var firstName: String
+    var userImage: String
+    var date_of_birth: String
+    var lastName: String
+    var status: String
+    var succes_rate: Int
+    var language: String
 }
