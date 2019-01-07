@@ -57,7 +57,7 @@ class passedSparkCell: BaseCell {
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.blue
+        imageView.backgroundColor = UIColor.backgroundGrey
         imageView.image = UIImage(named: "bram")
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 30
@@ -74,15 +74,15 @@ class passedSparkCell: BaseCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Bram"
+        label.font = UIFont(name: "Roboto-Regular", size: 18)
         return label
     }()
     
-    let messageTextView: UITextView = {
-        let textView = UITextView()
+    let messageTextView: UILabel = {
+        let textView = UILabel()
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.text = "Hoe gaat het met je moeder?"
-        textView.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
+        textView.font = UIFont(name: "Roboto-Regular", size: 14)
+        //textView.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
         return textView
     }()
     

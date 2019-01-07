@@ -10,48 +10,20 @@ import UIKit
 
 class TabCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor.white
-        cv.dataSource = self
-        cv.delegate = self
-        return cv
-    }()
-    
-    var passedRelations: [PassedRelation]?
-    
-    let cellId = "cellId"
-    
-    func fetchPassedRelations() {
-        ApiService.sharedInstance.fetchPassedRelations { (passedRelations: [PassedRelation]) in
-            
-            self.passedRelations = passedRelations
-            self.collectionView.reloadData()
-        }
-    }
+    var homeController: UIViewController?
     
     override func setupViews() {
         super.setupViews()
         
-        fetchPassedRelations()
-        
-        addSubview(collectionView)
-        addConstrainsWithFormat(format: "H:|[v0]|", view: collectionView)
-        addConstrainsWithFormat(format: "V:|[v0]|", view: collectionView)
-        
-        collectionView.register(passedSparkCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return passedRelations?.count ?? 0
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! passedSparkCell
-        
-        cell.passedRelation = passedRelations?[indexPath.item]
-        
+    
         return cell
     }
     
