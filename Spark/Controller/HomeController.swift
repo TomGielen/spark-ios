@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -25,7 +26,22 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
         navigationItem.titleView = titleLabel
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                print(data.value(forKey: "firstName") as! String)
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
 
+        
         checkIfUserIsloggedin()
         setupCollectionView()
         setupMenuBar()

@@ -166,35 +166,49 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
     // gaat op deze functie kapot ///////////
     ////////////////////////////////////////
     func addUserToCoreData(user: RegisterUserResponse){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+          print(user.date_of_birth)
         
-        newUser.setValue(user.firstName, forKey: "firstName")
-        newUser.setValue(user.lastName, forKey: "lastName")
-        newUser.setValue(user.date_of_birth, forKey: "date_of_birth")
-        newUser.setValue(user.device_id, forKey: "device_id")
-        newUser.setValue(user.gender, forKey: "gender")
-        newUser.setValue(user.language, forKey: "language")
-        newUser.setValue(user.preference, forKey: "preference")
-        newUser.setValue(user.status, forKey: "status")
-        newUser.setValue(user.succes_rate, forKey: "succes_rate")
-        newUser.setValue(user.userImage, forKey: "UserImage")
+        //var ad: AppDelegate! //or var ad: AppDelegate?
+        //var context: NSManagedObjectContext! //or var context: NSManagedObjectContext?
         
-        do {
-            try context.save()
-            UserDefaults.standard.set(true, forKey: "FinishedOnboarding")
-             // goToHomeView()
-        } catch {
-            print("Failed saving")
-        }
-
+        
+        DispatchQueue.main.async(execute: {
+            
+            // Handle further UI related operations here....
+            let ad = UIApplication.shared.delegate as! AppDelegate
+            let context = ad.managedContext
+            
+            let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            
+            newUser.setValue("rick", forKey: "firstName")
+            newUser.setValue(user.lastName, forKey: "lastName")
+            newUser.setValue(user.date_of_birth, forKey: "date_of_birth")
+            newUser.setValue(user.device_id, forKey: "device_id")
+            newUser.setValue(user.gender, forKey: "gender")
+            newUser.setValue(user.language, forKey: "language")
+            newUser.setValue(user.preference, forKey: "preference")
+            newUser.setValue(user.status, forKey: "status")
+            newUser.setValue(user.succes_rate, forKey: "succes_rate")
+            newUser.setValue(user.userImage, forKey: "UserImage")
+            
+            do {
+                try context.save()
+                UserDefaults.standard.set(true, forKey: "FinishedOnboarding")
+                self.goToHomeView()
+            } catch {
+                print("Failed saving")
+            }
+            
+        })
+    
     }
     
     func goToHomeView(){
-        let vc = HomeController()
-        self.navigationController?.pushViewController(vc, animated: true)
+          print("to another page")
+        // to onther page
+//        let vc = HomeController()
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
