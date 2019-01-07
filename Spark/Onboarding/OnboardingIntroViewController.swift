@@ -15,7 +15,7 @@ class OnboardingIntroViewController: UIViewController {
 
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 64, height: view.frame.height + 10))
         titleLabel.text = "SPARK"
-        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
+        titleLabel.font = UIFont(name: "Roboto-Bold", size: 20)
         navigationItem.titleView = titleLabel
         // Do any additional setup after loading the view.
     }

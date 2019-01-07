@@ -18,6 +18,9 @@
 		8373530321C2C6FD00D1B159 /* UIView+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530221C2C6FD00D1B159 /* UIView+custom.swift */; };
 		8373530521C4011800D1B159 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530421C4011800D1B159 /* UIColor.swift */; };
 		8373530721C41CB400D1B159 /* OnboardingPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530621C41CB300D1B159 /* OnboardingPreferenceViewController.swift */; };
+		861FE55021D7B65D005C7AAA /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE54F21D7B65C005C7AAA /* Roboto-Bold.ttf */; };
+		861FE55221D7B687005C7AAA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE55121D7B687005C7AAA /* Roboto-Regular.ttf */; };
+		861FE55421D7B69B005C7AAA /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE55321D7B69B005C7AAA /* Roboto-Medium.ttf */; };
 		83FAD1FA21DE44BB00B5E127 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FAD1F921DE44BB00B5E127 /* RegisterUser.swift */; };
 		8623628521B537B000DFCA94 /* PassedRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8623628421B537B000DFCA94 /* PassedRelation.swift */; };
 		8654308321B42AE900C6CC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654308221B42AE900C6CC31 /* AppDelegate.swift */; };
@@ -31,8 +34,7 @@
 		8680874321B70FEC00B57133 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874221B70FEC00B57133 /* ApiService.swift */; };
 		8680874521B7219A00B57133 /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874421B7219A00B57133 /* TabCell.swift */; };
 		8680874721B72E7400B57133 /* Tab3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874621B72E7400B57133 /* Tab3Cell.swift */; };
-		86A5B3F021CA53C50081F9EF /* segoe-ui-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86A5B3EF21CA53C50081F9EF /* segoe-ui-bold.ttf */; };
-		86A5B3F221CA53E10081F9EF /* SEGOEUI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 86A5B3F121CA53E10081F9EF /* SEGOEUI.TTF */; };
+		8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8681ADDC21DFCA85008B1421 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,9 @@
 		8373530221C2C6FD00D1B159 /* UIView+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+custom.swift"; sourceTree = "<group>"; };
 		8373530421C4011800D1B159 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8373530621C41CB300D1B159 /* OnboardingPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPreferenceViewController.swift; sourceTree = "<group>"; };
+		861FE54F21D7B65C005C7AAA /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		861FE55121D7B687005C7AAA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		861FE55321D7B69B005C7AAA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		83FAD1F921DE44BB00B5E127 /* RegisterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		8623628421B537B000DFCA94 /* PassedRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassedRelation.swift; sourceTree = "<group>"; };
 		8654307F21B42AE900C6CC31 /* Spark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,8 +67,7 @@
 		8680874221B70FEC00B57133 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		8680874421B7219A00B57133 /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		8680874621B72E7400B57133 /* Tab3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3Cell.swift; sourceTree = "<group>"; };
-		86A5B3EF21CA53C50081F9EF /* segoe-ui-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "segoe-ui-bold.ttf"; path = "Spark/Downloads/segoe-ui/segoe-ui-bold.ttf"; sourceTree = SOURCE_ROOT; };
-		86A5B3F121CA53E10081F9EF /* SEGOEUI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = SEGOEUI.TTF; path = "Spark/Downloads/segoe-ui/SEGOEUI.TTF"; sourceTree = SOURCE_ROOT; };
+		8681ADDC21DFCA85008B1421 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FC2D6A30DE53C0247CAC3D31 /* Pods-Spark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.release.xcconfig"; sourceTree = "<group>"; };
 		FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,13 +114,14 @@
 			path = onboarding;
 			sourceTree = "<group>";
 		};
-		837352F221B94BE000D1B159 /* fonts */ = {
+		837352F221B94BE000D1B159 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				86A5B3EF21CA53C50081F9EF /* segoe-ui-bold.ttf */,
-				86A5B3F121CA53E10081F9EF /* SEGOEUI.TTF */,
+				861FE54F21D7B65C005C7AAA /* Roboto-Bold.ttf */,
+				861FE55321D7B69B005C7AAA /* Roboto-Medium.ttf */,
+				861FE55121D7B687005C7AAA /* Roboto-Regular.ttf */,
 			);
-			path = fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		837352FD21C2A31300D1B159 /* extensions */ = {
@@ -161,7 +166,7 @@
 			children = (
 				8313786021D7B0E900157C39 /* Spark.xcdatamodeld */,
 				837352FD21C2A31300D1B159 /* extensions */,
-				837352F221B94BE000D1B159 /* fonts */,
+				837352F221B94BE000D1B159 /* Fonts */,
 				837352EE21B7F4B200D1B159 /* onboarding */,
 				8680874121B70FB300B57133 /* ApiService */,
 				8623628321B5379400DFCA94 /* Model */,
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				8654308421B42AE900C6CC31 /* HomeController.swift */,
+				8681ADDC21DFCA85008B1421 /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,10 +282,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86A5B3F021CA53C50081F9EF /* segoe-ui-bold.ttf in Resources */,
+				861FE55421D7B69B005C7AAA /* Roboto-Medium.ttf in Resources */,
+				861FE55221D7B687005C7AAA /* Roboto-Regular.ttf in Resources */,
 				8654308D21B42AEC00C6CC31 /* LaunchScreen.storyboard in Resources */,
+				861FE55021D7B65D005C7AAA /* Roboto-Bold.ttf in Resources */,
 				8654308A21B42AEC00C6CC31 /* Assets.xcassets in Resources */,
-				86A5B3F221CA53E10081F9EF /* SEGOEUI.TTF in Resources */,
 				8654308821B42AE900C6CC31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +366,7 @@
 				8373530721C41CB400D1B159 /* OnboardingPreferenceViewController.swift in Sources */,
 				837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */,
 				8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */,
+				8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */,
 				837352FF21C2A34100D1B159 /* UITextField+custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

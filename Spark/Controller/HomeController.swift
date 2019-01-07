@@ -22,7 +22,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 64, height: view.frame.height + 10))
         titleLabel.text = "SPARK"
-        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(800))
+        titleLabel.font = UIFont(name: "Roboto-Bold", size: 20)
         navigationItem.titleView = titleLabel
         
 
@@ -49,13 +49,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             flowLayout.minimumLineSpacing = 0
         }
         
-        collectionView?.backgroundColor = UIColor.white
+        collectionView?.backgroundColor = UIColor.backgroundGrey
         collectionView?.register(TabCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(Tab3Cell.self, forCellWithReuseIdentifier: tab3CellId)
         
         collectionView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
-        
+        collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.isPagingEnabled = true
     }
     
@@ -86,11 +86,16 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.item == 1 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: tab3CellId, for: indexPath)
+        if indexPath.item == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: tab3CellId, for: indexPath) as! Tab3Cell
+            cell.homeController = self
+            return cell
+    
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TabCell
+        cell.backgroundColor = UIColor.backgroundGrey
+        cell.homeController = self
+
         return cell
     }
     
