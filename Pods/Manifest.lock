@@ -1,9 +1,11 @@
 PODS:
   - Disk (0.4.0)
+  - MessengerKit (1.0.0)
   - NSFWDetector (1.1.0)
 
 DEPENDENCIES:
   - Disk (~> 0.4.0)
+  - MessengerKit (from `https://github.com/steve228uk/MessengerKit.git`)
   - NSFWDetector
 
 SPEC REPOS:
@@ -11,10 +13,20 @@ SPEC REPOS:
     - Disk
     - NSFWDetector
 
+EXTERNAL SOURCES:
+  MessengerKit:
+    :git: https://github.com/steve228uk/MessengerKit.git
+
+CHECKOUT OPTIONS:
+  MessengerKit:
+    :commit: 0aa7d371d8cd2527b7bb650cbbb05fd4e2229a9e
+    :git: https://github.com/steve228uk/MessengerKit.git
+
 SPEC CHECKSUMS:
   Disk: ef2956657d5bb56034b38b29b352170165226440
+  MessengerKit: 98afa44728b8e12672ece6db7764433e72832bf7
   NSFWDetector: aefec2254932bdc933cccc9385abfe07ae36a7a1
 
-PODFILE CHECKSUM: 0c42a9a69185c1c1881875e1239044ae9a2aafd6
+PODFILE CHECKSUM: b6900cf21740cd37509cfe983d0cb6407e5a1bcc
 
 COCOAPODS: 1.5.3

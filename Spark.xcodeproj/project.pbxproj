@@ -18,6 +18,7 @@
 		8373530321C2C6FD00D1B159 /* UIView+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530221C2C6FD00D1B159 /* UIView+custom.swift */; };
 		8373530521C4011800D1B159 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530421C4011800D1B159 /* UIColor.swift */; };
 		8373530721C41CB400D1B159 /* OnboardingPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373530621C41CB300D1B159 /* OnboardingPreferenceViewController.swift */; };
+		83FAD1FA21DE44BB00B5E127 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FAD1F921DE44BB00B5E127 /* RegisterUser.swift */; };
 		861FE55021D7B65D005C7AAA /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE54F21D7B65C005C7AAA /* Roboto-Bold.ttf */; };
 		861FE55221D7B687005C7AAA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE55121D7B687005C7AAA /* Roboto-Regular.ttf */; };
 		861FE55421D7B69B005C7AAA /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE55321D7B69B005C7AAA /* Roboto-Medium.ttf */; };
@@ -50,6 +51,7 @@
 		8373530221C2C6FD00D1B159 /* UIView+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+custom.swift"; sourceTree = "<group>"; };
 		8373530421C4011800D1B159 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8373530621C41CB300D1B159 /* OnboardingPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPreferenceViewController.swift; sourceTree = "<group>"; };
+		83FAD1F921DE44BB00B5E127 /* RegisterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		861FE54F21D7B65C005C7AAA /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		861FE55121D7B687005C7AAA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		861FE55321D7B69B005C7AAA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Spark/Pods-Spark-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+				"${BUILT_PRODUCTS_DIR}/MessengerKit/MessengerKit.framework",
 				"${BUILT_PRODUCTS_DIR}/NSFWDetector/NSFWDetector.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -315,6 +318,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessengerKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSFWDetector.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

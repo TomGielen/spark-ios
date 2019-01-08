@@ -144,10 +144,12 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Disk/Disk.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MessengerKit/MessengerKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/NSFWDetector/NSFWDetector.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Disk/Disk.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MessengerKit/MessengerKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/NSFWDetector/NSFWDetector.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

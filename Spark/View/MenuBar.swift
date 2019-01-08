@@ -51,7 +51,11 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         horizontalBarLeftAnchorConstraint?.constant = UIScreen.main.bounds.width / 6 - 22
         
         horizontalBarLeftAnchorConstraint?.isActive = true
-        horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12).isActive = true
+        if (HomeController.hasSafeArea){
+            horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -32).isActive = true
+        } else {
+            horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12).isActive = true
+        }
         horizontalBarView.widthAnchor.constraint(equalToConstant: 44).isActive = true
         horizontalBarView.heightAnchor.constraint(equalToConstant: 3).isActive = true
         
@@ -120,8 +124,11 @@ class MenuCell: BaseCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22).isActive = true
-
+        if (HomeController.hasSafeArea) {
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -42).isActive = true
+        } else {
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22).isActive = true
+        }
 
         imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
