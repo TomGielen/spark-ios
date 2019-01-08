@@ -30,6 +30,9 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
         titleLabel.font = UIFont(name: "Roboto-Bold", size: 20)
         navigationItem.titleView = titleLabel
         
+        let dateOfBirth = UserDefaults.standard.object(forKey: "dateOfBirth") as! Date
+        print("DateOfBIRTH --------------------", dateOfBirth)
+        
         imagePicker.delegate = self
         
         profile_ImageView.addTapGestureRecognizer {
@@ -146,10 +149,10 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
             
             // APIs usually respond with the data you just sent in your POST request
             if let data = responseData, let utf8Representation = String(data: data, encoding: .utf8) {
-                print("response: ", utf8Representation)
+               // print("response: ", utf8Representation)
                 do{
                     let user = try JSONDecoder().decode(RegisterUserResult.self, from: data)
-                    print("DE NEIWUE USERRRTT   ", user.result as Any)
+                    print("DE NEIWUE USERRRTT   ", user.result.date_of_birth as Any)
                     //
                     self.addUserToCoreData(user: user.result )
                 } catch let error {
@@ -162,15 +165,8 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
         task.resume()
     }
     
-    //////////////////////////////////////////
-    // gaat op deze functie kapot ///////////
-    ////////////////////////////////////////
     func addUserToCoreData(user: RegisterUserResponse){
           print(user.date_of_birth)
-        
-        //var ad: AppDelegate! //or var ad: AppDelegate?
-        //var context: NSManagedObjectContext! //or var context: NSManagedObjectContext?
-        
         
         DispatchQueue.main.async(execute: {
             
@@ -181,7 +177,7 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
             let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
             let newUser = NSManagedObject(entity: entity!, insertInto: context)
             
-            newUser.setValue("rick", forKey: "firstName")
+            newUser.setValue(user.firstName, forKey: "firstName")
             newUser.setValue(user.lastName, forKey: "lastName")
             newUser.setValue(user.date_of_birth, forKey: "date_of_birth")
             newUser.setValue(user.device_id, forKey: "device_id")
@@ -207,8 +203,9 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
     func goToHomeView(){
           print("to another page")
         // to onther page
-//        let vc = HomeController()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "home") as! HomeController
+         self.present(vc, animated:true, completion:nil)
     }
 }
 

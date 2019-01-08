@@ -26,36 +26,51 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         titleLabel.font = UIFont(name: "Roboto-Bold", size: 20)
         navigationItem.titleView = titleLabel
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "firstName") as! String)
+        if (checkIfUserIsRegistered()){
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+            request.returnsObjectsAsFaults = false
+            do {
+                let result = try context.fetch(request)
+                for data in result as! [NSManagedObject] {
+                   
+                    var newLoginUser = LoginUser()
+                    newLoginUser.firstName = data.value(forKey: "firstName") as? String
+                    newLoginUser.device_id = data.value(forKey: "device_id") as? String
+                    
+                    loginUser(loginUser: newLoginUser) { (error) in
+                        if let error = error {
+                            fatalError(error.localizedDescription)
+                        }
+                    }
+                }
+            } catch {
+                print("Failed")
             }
-            
-        } catch {
-            
-            print("Failed")
+        } else {
+             toOnboarding()
         }
-
         
-        checkIfUserIsloggedin()
+        
         setupCollectionView()
         setupMenuBar()
     }
     
     
-    func checkIfUserIsloggedin() {
+    func checkIfUserIsRegistered() -> Bool {
         let name = UserDefaults.standard.bool(forKey: "FinishedOnboarding")
-        
         if(!name){
+            return false
+        }else{
+            return true
+        }
+    }
+    
+    func toOnboarding(){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "onboarding_nav") as! UINavigationController
         self.present(nextViewController, animated:true, completion:nil)
-        }
     }
     
     func setupCollectionView() {
@@ -118,7 +133,59 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: view.frame.width, height: view.frame.height - 65)
     }
-
+    
+    func loginUser(loginUser : LoginUser ,completion:((Error?) -> Void)?) {
+    var urlComponents = URLComponents()
+    urlComponents.scheme = "https"
+    urlComponents.host = "sparklesapi.azurewebsites.net"
+    urlComponents.path = "/user/login"
+    guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
+    
+    // Specify this request as being a POST method
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    // Make sure that we include headers specifying that our request's HTTP body
+    // will be JSON encoded
+    var headers = request.allHTTPHeaderFields ?? [:]
+    headers["Content-Type"] = "application/json"
+    request.allHTTPHeaderFields = headers
+    
+    // Now let's encode out Post struct into JSON data...
+    let encoder = JSONEncoder()
+    do {
+    let jsonData = try encoder.encode(loginUser)
+    // ... and set our request's HTTP body
+    request.httpBody = jsonData
+    print("jsonData: ", String(data: request.httpBody!, encoding: .utf8) ?? "no body data")
+    } catch {
+    completion?(error)
+    }
+    
+    // Create and run a URLSession data task with our JSON encoded POST request
+    let config = URLSessionConfiguration.default
+    let session = URLSession(configuration: config)
+    let task = session.dataTask(with: request) { (responseData, response, responseError) in
+    guard responseError == nil else {
+    completion?(responseError!)
+    return
+    }
+    
+    // APIs usually respond with the data you just sent in your POST request
+    if let data = responseData, let utf8Representation = String(data: data, encoding: .utf8) {
+    print("response: ", utf8Representation)
+//    do{
+//    let user = try JSONDecoder().decode(RegisterUserResult.self, from: data)
+//    print("DE NEIWUE USERRRTT   ", user.result.date_of_birth as Any)
+//    //
+//    } catch let error {
+//    print(error)
+//    }
+    } else {
+    print("no readable data received in response")
+    }
+    }
+    task.resume()
+    }
 }
 
 
