@@ -11,7 +11,6 @@ import CoreData
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    
     let cellId = "cellId"
     let tab3CellId = "tab3CellId"
     

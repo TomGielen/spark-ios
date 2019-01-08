@@ -5,5 +5,7 @@ target 'Spark' do
 
 pod 'NSFWDetector'
 pod 'Disk', '~> 0.4.0'
+pod 'SnapKit', '~> 4.0.0'
+pod 'MessengerKit', :git => 'https://github.com/steve228uk/MessengerKit.git'
 
 end
