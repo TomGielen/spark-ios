@@ -152,7 +152,7 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
                // print("response: ", utf8Representation)
                 do{
                     let user = try JSONDecoder().decode(RegisterUserResult.self, from: data)
-                    print("DE NEIWUE USERRRTT   ", user.result.date_of_birth as Any)
+                    print("DE NEIWUE USERRRTT   ", user.result as Any)
                     //
                     self.addUserToCoreData(user: user.result )
                 } catch let error {
@@ -177,6 +177,7 @@ class OnboardingImageViewController: UIViewController, UIImagePickerControllerDe
             let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
             let newUser = NSManagedObject(entity: entity!, insertInto: context)
             
+            newUser.setValue(user._id, forKey: "user_id")
             newUser.setValue(user.firstName, forKey: "firstName")
             newUser.setValue(user.lastName, forKey: "lastName")
             newUser.setValue(user.date_of_birth, forKey: "date_of_birth")

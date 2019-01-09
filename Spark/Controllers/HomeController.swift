@@ -23,7 +23,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     let tab1CellId = "tab1CellId"
     let tab2CellId = "tab2CellId"
     let tab3CellId = "tab3CellId"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +53,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                             fatalError(error.localizedDescription)
                         }
                     }
+                    updateUser(id: data.value(forKey: "user_id") as! String){
+                        (error) in
+                        if let error = error {
+                            fatalError(error.localizedDescription)
+                        }
+                    }
                 }
             } catch {
                 print("Failed")
@@ -68,7 +74,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     func checkIfUserIsRegistered() -> Bool {
         let name = UserDefaults.standard.bool(forKey: "FinishedOnboarding")
-        if (name) {
+        if (!name) {
             return false
         } else {
             return true
@@ -97,7 +103,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.isPagingEnabled = true
-
+        
     }
     
     func scrollToMenuIndex(menuIndex: Int) {
@@ -157,13 +163,59 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         scrollToMenuIndex(menuIndex: 1)
-
+        
         if (HomeController.hasSafeArea) {
             return CGSize.init(width: view.frame.width, height: view.frame.height - 90)
             
         } else {
             return CGSize.init(width: view.frame.width, height: view.frame.height - 65)
         }
+    }
+    
+    func updateUser(id: String, completion:((Error?) -> Void)?) {
+        
+        let jsonUrlString = String(format: "https://sparklesapi.azurewebsites.net/user/%@", id)
+        
+        guard let url = URL(string: jsonUrlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            guard let data = data else { return }
+            do {
+                let singleObject = try JSONDecoder().decode(UpdateUser.self, from: data)
+                let json = singleObject
+                print(json)
+                self.updateCoreDataUser(user: json)
+            } catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+            }.resume()
+    }
+    
+    func updateCoreDataUser(user: UpdateUser){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "User")
+        fetchRequest.predicate = NSPredicate(format: "device_id = %@", user.device_id)
+        do {
+            let test = try context.fetch(fetchRequest)
+            
+            let objectUpdate = test[0] as! NSManagedObject
+            objectUpdate.setValue(user.lastName, forKey: "lastName")
+            objectUpdate.setValue(user.status, forKey: "status")
+            objectUpdate.setValue(user.succes_rate, forKey: "succes_rate")
+            objectUpdate.setValue(user.userImage, forKey: "UserImage")
+            do{
+                try context.save()
+                print("updated user data")
+            }
+            catch{
+                print(error)
+            }
+        }
+        catch{
+            print(error)
+        }
+        
+        
     }
 }
 

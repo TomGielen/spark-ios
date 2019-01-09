@@ -57,4 +57,8 @@ struct SingleObject: Decodable {
     let data: [PassedRelationResponse]
 }
 
+struct matchResponse: Decodable {
+    let confirmation: String?
+}
+
 

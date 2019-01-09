@@ -120,4 +120,4 @@ class NoSparkCard: UIView {
     }
 }
 
-let view = NoSparkCard()
+let NoSparkCardView = NoSparkCard()

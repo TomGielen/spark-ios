@@ -22,6 +22,7 @@
 		83949F3D21E5409600041702 /* NoSparkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83949F3C21E5409600041702 /* NoSparkCard.swift */; };
 		83FAD1FA21DE44BB00B5E127 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FAD1F921DE44BB00B5E127 /* RegisterUser.swift */; };
 		83FAD1FC21E3CCB300B5E127 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FAD1FB21E3CCB300B5E127 /* CoreData.framework */; };
+		83FB9FE321E68C3300D9E9E0 /* SearchingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB9FE221E68C3300D9E9E0 /* SearchingCard.swift */; };
 		861FE55021D7B65D005C7AAA /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE54F21D7B65C005C7AAA /* Roboto-Bold.ttf */; };
 		861FE55221D7B687005C7AAA /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE55121D7B687005C7AAA /* Roboto-Regular.ttf */; };
 		861FE55421D7B69B005C7AAA /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 861FE55321D7B69B005C7AAA /* Roboto-Medium.ttf */; };
@@ -58,6 +59,7 @@
 		83949F3C21E5409600041702 /* NoSparkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSparkCard.swift; sourceTree = "<group>"; };
 		83FAD1F921DE44BB00B5E127 /* RegisterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		83FAD1FB21E3CCB300B5E127 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		83FB9FE221E68C3300D9E9E0 /* SearchingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingCard.swift; sourceTree = "<group>"; };
 		861FE54F21D7B65C005C7AAA /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		861FE55121D7B687005C7AAA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		861FE55321D7B69B005C7AAA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				83949F3C21E5409600041702 /* NoSparkCard.swift */,
+				83FB9FE221E68C3300D9E9E0 /* SearchingCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				830E6C7D21C92F0900010D71 /* OnboardingImageViewController.swift in Sources */,
 				8373530321C2C6FD00D1B159 /* UIView+custom.swift in Sources */,
 				8654308321B42AE900C6CC31 /* AppDelegate.swift in Sources */,
+				83FB9FE321E68C3300D9E9E0 /* SearchingCard.swift in Sources */,
 				837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */,
 				8680874321B70FEC00B57133 /* ApiService.swift in Sources */,
 				8313786221D7B0E900157C39 /* Spark.xcdatamodeld in Sources */,

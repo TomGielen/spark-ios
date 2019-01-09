@@ -24,6 +24,7 @@ struct RegisterUserResult: Decodable {
 }
 
 struct RegisterUserResponse: Decodable {
+    var _id: String
     var device_id: String
     var gender: String
     var preference: String
@@ -34,4 +35,12 @@ struct RegisterUserResponse: Decodable {
     var status: String
     var succes_rate: Int
     var language: String
+}
+
+struct UpdateUser: Decodable {
+    var device_id: String
+    var userImage: String
+    var lastName: String
+    var status: String
+    var succes_rate: Int
 }
