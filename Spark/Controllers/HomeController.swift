@@ -18,6 +18,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return true
     }
     
+    var centerCards: Bool = false
     
     let tab1CellId = "tab1CellId"
     let tab2CellId = "tab2CellId"
@@ -60,7 +61,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             toOnboarding()
         }
         
-        
         setupCollectionView()
         setupMenuBar()
     }
@@ -97,6 +97,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.isPagingEnabled = true
+
     }
     
     func scrollToMenuIndex(menuIndex: Int) {
@@ -128,21 +129,25 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return 3
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView1: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if (centerCards == false) {
+            collectionView?.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
+            centerCards = true
+        }
         
         if indexPath.item == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: tab1CellId, for: indexPath) as! Tab1Cell
+            let cell = collectionView1.dequeueReusableCell(withReuseIdentifier: tab1CellId, for: indexPath) as! Tab1Cell
             cell.homeController = self
             return cell
         }
         
         if indexPath.item == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: tab2CellId, for: indexPath) as! Tab2Cell
+            let cell = collectionView1.dequeueReusableCell(withReuseIdentifier: tab2CellId, for: indexPath) as! Tab2Cell
             cell.homeController = self
             cell.backgroundColor = UIColor.blue
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: tab3CellId, for: indexPath) as! Tab3Cell
+            let cell = collectionView1.dequeueReusableCell(withReuseIdentifier: tab3CellId, for: indexPath) as! Tab3Cell
             cell.homeController = self
             return cell
         }
@@ -150,65 +155,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        scrollToMenuIndex(menuIndex: 1)
+
         if (HomeController.hasSafeArea) {
             return CGSize.init(width: view.frame.width, height: view.frame.height - 90)
             
         } else {
             return CGSize.init(width: view.frame.width, height: view.frame.height - 65)
         }
-    }
-    
-    func loginUser(loginUser : LoginUser ,completion:((Error?) -> Void)?) {
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "sparklesapi.azurewebsites.net"
-        urlComponents.path = "/user/login"
-        guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
-        
-        // Specify this request as being a POST method
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        // Make sure that we include headers specifying that our request's HTTP body
-        // will be JSON encoded
-        var headers = request.allHTTPHeaderFields ?? [:]
-        headers["Content-Type"] = "application/json"
-        request.allHTTPHeaderFields = headers
-        
-        // Now let's encode out Post struct into JSON data...
-        let encoder = JSONEncoder()
-        do {
-            let jsonData = try encoder.encode(loginUser)
-            // ... and set our request's HTTP body
-            request.httpBody = jsonData
-            print("jsonData: ", String(data: request.httpBody!, encoding: .utf8) ?? "no body data")
-        } catch {
-            completion?(error)
-        }
-        
-        // Create and run a URLSession data task with our JSON encoded POST request
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        let task = session.dataTask(with: request) { (responseData, response, responseError) in
-            guard responseError == nil else {
-                completion?(responseError!)
-                return
-            }
-            
-            // APIs usually respond with the data you just sent in your POST request
-            if let data = responseData, let utf8Representation = String(data: data, encoding: .utf8) {
-                print("response: ", utf8Representation)
-                //    do{
-                //    let user = try JSONDecoder().decode(RegisterUserResult.self, from: data)
-                //    print("DE NEIWUE USERRRTT   ", user.result.date_of_birth as Any)
-                //    //
-                //    } catch let error {
-                //    print(error)
-                //    }
-            } else {
-                print("no readable data received in response")
-            }
-        }
-        task.resume()
     }
 }
 

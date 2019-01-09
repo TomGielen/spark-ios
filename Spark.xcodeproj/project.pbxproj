@@ -39,6 +39,7 @@
 		8680874721B72E7400B57133 /* Tab3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874621B72E7400B57133 /* Tab3Cell.swift */; };
 		8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8681ADDC21DFCA85008B1421 /* ChatViewController.swift */; };
 		8694CDBA21E5FCFD00D8E9B7 /* Tab2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CDB921E5FCFD00D8E9B7 /* Tab2Cell.swift */; };
+		8694CDBC21E6265800D8E9B7 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CDBB21E6265800D8E9B7 /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		8680874621B72E7400B57133 /* Tab3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3Cell.swift; sourceTree = "<group>"; };
 		8681ADDC21DFCA85008B1421 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8694CDB921E5FCFD00D8E9B7 /* Tab2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2Cell.swift; sourceTree = "<group>"; };
+		8694CDBB21E6265800D8E9B7 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		FC2D6A30DE53C0247CAC3D31 /* Pods-Spark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.release.xcconfig"; sourceTree = "<group>"; };
 		FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				8680874221B70FEC00B57133 /* ApiService.swift */,
+				8694CDBB21E6265800D8E9B7 /* LoginService.swift */,
 			);
 			path = ApiService;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				83949F3D21E5409600041702 /* NoSparkCard.swift in Sources */,
 				8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */,
 				8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */,
+				8694CDBC21E6265800D8E9B7 /* LoginService.swift in Sources */,
 				837352FF21C2A34100D1B159 /* UITextField+custom.swift in Sources */,
 				8694CDBA21E5FCFD00D8E9B7 /* Tab2Cell.swift in Sources */,
 			);
