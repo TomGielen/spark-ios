@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import CoreData
 
 class NoSparkCard: UIView {
     //we use lazy properties for each view
@@ -41,9 +42,9 @@ class NoSparkCard: UIView {
         return button
     }()
     
-
     
-
+    
+    
     
     //initWithFrame to init view from code
     override init(frame: CGRect) {
@@ -73,10 +74,47 @@ class NoSparkCard: UIView {
     
     @objc private func buttonAction(sender: UIButton!) {
         print("ik kan op de button klikken hihihihihihihihihihihihihihihi")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                
+                let id = data.value(forKey: "user_id") as? String
+                let preference = data.value(forKey: "preference") as? String
+                let language = data.value(forKey: "language") as? String
+                
+                createRelation(id: id!, preference: preference!, language: language!){ (error) in
+                    if let error = error {
+                        fatalError(error.localizedDescription)
+                    }
+                }
+            }
+        } catch {
+            print("Failed")
+        }
     }
     
+    func createRelation(id: String,preference: String, language: String, completion:((Error?) -> Void)?) {
+        
+        let jsonUrlString = String(format: "https://sparklesapi.azurewebsites.net/matching/search_match/%@/%@/%@", id, preference, language)
+        
+        guard let url = URL(string: jsonUrlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            guard let data = data else { return }
+            do {
+                let singleObject = try JSONDecoder().decode(matchResponse.self, from: data)
+                let json = singleObject.confirmation
+                print(json!)
+            } catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+        }.resume()
+    }
     
-
     override class var requiresConstraintBasedLayout: Bool {
         return false
     }
