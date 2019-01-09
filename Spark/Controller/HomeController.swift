@@ -11,6 +11,14 @@ import CoreData
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    static var hasSafeArea: Bool {
+        guard #available(iOS 11.0, *), let topPadding = UIApplication.shared.keyWindow?.safeAreaInsets.top, topPadding > 24 else {
+            return false
+        }
+        return true
+    }
+    
+    
     let cellId = "cellId"
     let tab3CellId = "tab3CellId"
     
@@ -103,7 +111,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     private func setupMenuBar() {
         view.addSubview(menuBar)
         view.addConstrainsWithFormat(format: "H:|[v0]|", view: menuBar)
-        view.addConstrainsWithFormat(format: "V:[v0(65)]|", view: menuBar)
+        if (HomeController.hasSafeArea) {
+            view.addConstrainsWithFormat(format: "V:[v0(90)]|", view: menuBar)
+        } else {
+            view.addConstrainsWithFormat(format: "V:[v0(65)]|", view: menuBar)
+        }
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -130,7 +142,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: view.frame.width, height: view.frame.height - 65)
+        if (HomeController.hasSafeArea) {
+            return CGSize.init(width: view.frame.width, height: view.frame.height - 90)
+
+        } else {
+            return CGSize.init(width: view.frame.width, height: view.frame.height - 65)
+        }
     }
     
     func loginUser(loginUser : LoginUser ,completion:((Error?) -> Void)?) {
