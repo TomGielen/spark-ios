@@ -109,7 +109,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		837352EE21B7F4B200D1B159 /* onboarding */ = {
+		837352EE21B7F4B200D1B159 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */,
@@ -119,7 +119,7 @@
 				8373530621C41CB300D1B159 /* OnboardingPreferenceViewController.swift */,
 				830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */,
 			);
-			path = onboarding;
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		837352F221B94BE000D1B159 /* Fonts */ = {
@@ -132,22 +132,12 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		837352FD21C2A31300D1B159 /* extensions */ = {
-			isa = PBXGroup;
-			children = (
-				837352FE21C2A34100D1B159 /* UITextField+custom.swift */,
-				8373530221C2C6FD00D1B159 /* UIView+custom.swift */,
-				8373530421C4011800D1B159 /* UIColor.swift */,
-			);
-			path = extensions;
-			sourceTree = "<group>";
-		};
-		83949F3B21E5406F00041702 /* cards */ = {
+		83949F3B21E5406F00041702 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
 				83949F3C21E5409600041702 /* NoSparkCard.swift */,
 			);
-			path = cards;
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		8623628321B5379400DFCA94 /* Model */ = {
@@ -181,14 +171,13 @@
 		8654308121B42AE900C6CC31 /* Spark */ = {
 			isa = PBXGroup;
 			children = (
-				83949F3B21E5406F00041702 /* cards */,
+				83949F3B21E5406F00041702 /* Cards */,
 				8313786021D7B0E900157C39 /* Spark.xcdatamodeld */,
-				837352FD21C2A31300D1B159 /* extensions */,
 				837352F221B94BE000D1B159 /* Fonts */,
-				837352EE21B7F4B200D1B159 /* onboarding */,
+				837352EE21B7F4B200D1B159 /* Onboarding */,
 				8680874121B70FB300B57133 /* ApiService */,
 				8623628321B5379400DFCA94 /* Model */,
-				8654309A21B4AA6800C6CC31 /* Controller */,
+				8654309A21B4AA6800C6CC31 /* Controllers */,
 				8654309721B4A9DC00C6CC31 /* View */,
 				8654309421B4A93400C6CC31 /* Helpers */,
 				8654308221B42AE900C6CC31 /* AppDelegate.swift */,
@@ -203,6 +192,9 @@
 		8654309421B4A93400C6CC31 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				837352FE21C2A34100D1B159 /* UITextField+custom.swift */,
+				8373530221C2C6FD00D1B159 /* UIView+custom.swift */,
+				8373530421C4011800D1B159 /* UIColor.swift */,
 				8654309521B4A96E00C6CC31 /* Extensions.swift */,
 			);
 			path = Helpers;
@@ -219,13 +211,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		8654309A21B4AA6800C6CC31 /* Controller */ = {
+		8654309A21B4AA6800C6CC31 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8654308421B42AE900C6CC31 /* HomeController.swift */,
 				8681ADDC21DFCA85008B1421 /* ChatViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8680874121B70FB300B57133 /* ApiService */ = {

@@ -21,22 +21,29 @@ class NoSparkCard: UIView {
         view.layer.shadowOffset.width = 0
         view.layer.shadowOffset.height = 1
         view.layer.shadowRadius = 4
-        
-        //view.addSubview(searchForRelationBtn)
+        view.addSubview(text)
+        view.addSubview(searchForRelationBtn)
         return view
+    }()
+    
+    lazy var text: UILabel = {
+        let text = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        text.text = "Let's start a new spark."
+        return text
     }()
     
     lazy var searchForRelationBtn: UIButton = {
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
         button.backgroundColor = UIColor.buttonGrey
+        button.tintColor = UIColor.black
         button.setTitle("SEARCH FOR A SPARK", for: .normal)
-       // button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return button
     }()
     
-//    @objc func buttonAction(sender: UIButton!) {
-//        print("Button tapped")
-//    }
+    @objc func buttonAction(sender: UIButton!) {
+        print("Button tapped")
+    }
     
 
     
