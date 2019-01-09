@@ -49,7 +49,6 @@ class ChatViewController: MSGMessengerViewController {
 
     }
 
-}
 
 // MARK: - MSGDataSource
 

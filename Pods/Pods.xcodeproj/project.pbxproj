@@ -212,7 +212,6 @@
 		3A43C375A5ADEFBBC01EA1D198605348 /* MSGTailIncomingBubble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MSGTailIncomingBubble.swift; path = MessengerKit/Bubbles/iMessage/MSGTailIncomingBubble.swift; sourceTree = "<group>"; };
 		3C2E79F330F949628880E8E0D26C8164 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		3D084819DD047BA056D47286FDDB70A7 /* Pods-Spark-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Spark-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3F19155DCA6AD17524CCAA338CD94E18 /* Disk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Disk.framework; path = Disk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		410825F4393B715D0812FCEB515C870A /* Pods-Spark-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Spark-umbrella.h"; sourceTree = "<group>"; };
 		43FB024D9549C8EBB061D0C02A6B52BD /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		44D5470E659B65CD7D592E402BA4E54D /* MSGImageCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MSGImageCollectionViewCell.swift; path = "MessengerKit/Collection View/Cells/Media/MSGImageCollectionViewCell.swift"; sourceTree = "<group>"; };
@@ -359,7 +358,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A00FFC49E1777734BD08C1F19486E8 /* Foundation.framework in Frameworks */,
+				9682154D32CB1D563DAA45D642164A6C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,19 +369,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA93A303CCA37BD34925CB9168E50658 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				746E5F2D8A8FC69D2754FE40A57F4A2E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FFCA68AA6DF9D7D5FB1069D2031852E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				447F9E6D28B90CEBB3A345BBDD347794 /* Foundation.framework in Frameworks */,
+				CDA1BF7207E3F97E40079B07FE68D664 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,9 +450,9 @@
 		4FE37F6846F8691235A4854977A74900 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+				FDF54D281B60284080591AA77C08B1AC /* Pods-Spark */,
 			);
-			name = iOS;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		58D1648884A5C9CBDAFE82C84FD5F21C /* NSFWDetector */ = {
@@ -475,58 +466,12 @@
 			path = NSFWDetector;
 			sourceTree = "<group>";
 		};
-		608A453B44CA542AF8EFDA8FA93C0958 /* MessengerKit */ = {
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				722BB928C3E8D288FE978DC61E8E8285 /* KeyboardFrameObserver.swift */,
-				7F3703D41AB906F47F6DD45A8D669198 /* KeyboardFrameObserversManager.swift */,
-				26ACFD103B28842B69C00E6F0278F341 /* KeyboardLayoutGuide.swift */,
-				FB1734CA36155A60613AEF19047E23BC /* MessengerKit.swift */,
-				82CA15AA5DA87A12A0B8C9A7AD58580F /* MSGCollectionView.swift */,
-				E49551CB574A0B1E3DC9B903C931DAF5 /* MSGDataSource.swift */,
-				22B098AC613CCB5234ABDFA9A9F1FF8D /* MSGDelegate.swift */,
-				EFB2A57AA855DF689FE4777458349E29 /* MSGEmojiCollectionViewCell.swift */,
-				8D2EFA56D8E4F780B975AAFD77BCB599 /* MSGImageCollectionViewCell.swift */,
-				F8C707E415CFCCF65BED826D5BD22C90 /* MSGImessageCollectionView.swift */,
-				48679771F4A7F142D695AA61E16446CC /* MSGImessageFooterView.swift */,
-				479885C0039E3249B8B69168A2EA576D /* MSGImessageHeaderView.swift */,
-				5234328E8170B0E9D4CCAA1A40DB2C2A /* MSGImessageInputView.swift */,
-				19471ED311E1E051E1943C8E28B5693E /* MSGImessageSendButton.swift */,
-				7972E9D0652B1333FAAC03DE0B0D0F69 /* MSGIMessageStyle.swift */,
-				50EFA667B7A074BA4E90D3629365B88D /* MSGImessageTravCollectionViewFlowLayout.swift */,
-				E28617A28E69D40CAAE03CED75E2C0F5 /* MSGInputSeparatorView.swift */,
-				0815647C6ECFB9A9AA3905292172C84E /* MSGInputView.swift */,
-				8A0D17A9BB92D50411CDF28BEF818677 /* MSGMessage.swift */,
-				75F02B1F1CD3DBCF7D2D0165B27C9638 /* MSGMessageBody.swift */,
-				59E3870DBCAC9029ACA183AE32577689 /* MSGMessageCell.swift */,
-				63B12D6C30C42D94CEA02CFFEB0C632F /* MSGMessageCellDelegate.swift */,
-				DC79AF54097D6B6302E177DE3D4328C7 /* MSGMessengerStyle.swift */,
-				886512241189EEE717F75DAA51EF6DFD /* MSGMessengerView.swift */,
-				31406165B0305265A333DC74F09B0D51 /* MSGMessengerViewController.swift */,
-				AC71236D2D7989C4C6CB3118089DB117 /* MSGMessengerViewController + CellDelegate.swift */,
-				D4E7EAE69A4B13D40BDFA4C350BE832F /* MSGMessengerViewController + DataSource.swift */,
-				466F81423ED332C213704FE774E6C5E5 /* MSGMessengerViewController + Helpers.swift */,
-				1FEFF4168F10C5A3C290F12F4F0AAB8C /* MSGPlaceholderTextView.swift */,
-				E5B47B7226F8A267FC3AEEFBBA8975DB /* MSGSectionReusableView.swift */,
-				C72D961034854CD0CE22969439A91DB7 /* MSGSectionReusableViewDelegate.swift */,
-				2CCD297B72ED7C1EC25BC560C84B40B0 /* MSGTailCollectionViewCell.swift */,
-				ED9984C213BB314462546543437A96C7 /* MSGTailIncomingBubble.swift */,
-				4A5C5E147401D8967A8A69EA6718C910 /* MSGTailOutgoingBubble.swift */,
-				A42F2A28656D2674CA16FD05FFF6AB2C /* MSGTravamigosStyle.swift */,
-				5F1391F3D9B47298ADA15EC61495B13E /* MSGTravCollectionView.swift */,
-				20745CDA7FC4AC3D72B095AD272CEA23 /* MSGTravCollectionViewCell.swift */,
-				DB4913B853AA16D290CBDDBD5DDC6905 /* MSGTravCollectionViewFlowLayout.swift */,
-				617E29ED0519597C7DBF907E86CA2E6A /* MSGTravCollectionViewSectionFooter.swift */,
-				B1ED7F2074F4031F1725DD06FC2481E4 /* MSGTravCollectionViewSectionHeader.swift */,
-				E0D148F80C68E130497F22CE8EB39484 /* MSGTravIncomingBubble.swift */,
-				D952C28B483BD2B3F3CE28F089F4D0D4 /* MSGTravInputView.swift */,
-				8051A8DFFC26D4E313055F615C324221 /* MSGTravOutgoingBubble.swift */,
-				7178397D3DBCDF36E578DBA1614F93A4 /* MSGUser.swift */,
-				F01C76E69BBC5E32EB37CB1573CE85E0 /* Resources */,
-				C92C63BD887145C242EFD4AC3C06992E /* Support Files */,
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
 			);
-			name = MessengerKit;
-			path = MessengerKit;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		6A32611B3FCAA52AB74C64C00E1C78A7 /* Support Files */ = {
@@ -649,7 +594,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				44D5347904CF754D6785B84253F2574A /* iOS */,
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -703,32 +648,6 @@
 				8BBEABFF14458CD20781AF78A3093AC2 /* SnapKit */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		F01C76E69BBC5E32EB37CB1573CE85E0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8E78DEEC595ED6D0D04EAB22F6C477B0 /* Assets.xcassets */,
-				625BD09B16393A6EA065932903A095A6 /* MSGImessageIncomingFooterView.xib */,
-				74BA1D102565D17747BF488AD7EB6891 /* MSGImessageIncomingHeaderView.xib */,
-				6BF1EC5767B0D27BD419D64BA4C1F8E4 /* MSGImessageInputView.xib */,
-				E7CBAD6711AF34A2928944A2C7C1D109 /* MSGImessageOutgoingFooterView.xib */,
-				50307405781AC302791DCD1D8454155D /* MSGImessageOutgoingHeaderView.xib */,
-				9E1134F30CEA71B9B1E3986625215BF8 /* MSGIncomingEmojiCollectionViewCell.xib */,
-				9068840C71FCE1E02B17030DFD2949D9 /* MSGIncomingImageCollectionViewCell.xib */,
-				DC855243396D2E5F94D76E8ECEEC2633 /* MSGIncomingTailCollectionViewCell.xib */,
-				7427381FEA0DC1E174FB3B352E904897 /* MSGIncomingTravCollectionViewCell.xib */,
-				1971A11A024731CE5470EF0405C100E0 /* MSGMessengerView.xib */,
-				76C3E017C137E5ECF2423E1905B076A0 /* MSGOutgoingEmojiCollectionViewCell.xib */,
-				E3180133E8BA157FDFD42A2C0386AA88 /* MSGOutgoingImageCollectionViewCell.xib */,
-				B22987E275EB16D2078057B24E928354 /* MSGOutgoingTailCollectionViewCell.xib */,
-				7C7A36BB3CEA698938CE42C564109123 /* MSGOutgoingTravCollectionViewCell.xib */,
-				E939AC0BF10841D718A603F562583856 /* MSGTravIncomingCollectionViewSectionFooter.xib */,
-				36654B55B8474F47BC5EA98CE274B5B5 /* MSGTravIncomingCollectionViewSectionHeader.xib */,
-				B69E57F2C48AFDDDFD1A1600F5F669A4 /* MSGTravOutgoingCollectionViewSectionFooter.xib */,
-				9747062C20935B4309C9561A75C956B4 /* MSGTravOutgoingCollectionViewSectionHeader.xib */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		FDF54D281B60284080591AA77C08B1AC /* Pods-Spark */ = {
@@ -908,42 +827,6 @@
 			productReference = D1EF5FAC49C1083991189A6B9319C216 /* MessengerKit.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		7D7A0DE9B4A690188AFD32C5420C92F8 /* MessengerKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D13E8637D86646D58E4A7558535FE569 /* Build configuration list for PBXNativeTarget "MessengerKit" */;
-			buildPhases = (
-				845831AF20C1B8825E812D45C0F6ABC3 /* Headers */,
-				BB06E78D5EA64583F908FD96C049544D /* Sources */,
-				34751258D142F712509B46CBF913CF6F /* Frameworks */,
-				A2A1B2FE968963F5E601BE364BBB02CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1001F6F4AF2A6F58DC8584052AD98AAA /* PBXTargetDependency */,
-			);
-			name = MessengerKit;
-			productName = MessengerKit;
-			productReference = EC8111BB2B43A1FE5DBCD6E5237B17A1 /* MessengerKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F4FDD3F626EA7F62EA18FE7DC4FF7453 /* MessengerKit-MessengerKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4625908F1C329EC4E55D9BD7FEB4A7DE /* Build configuration list for PBXNativeTarget "MessengerKit-MessengerKit" */;
-			buildPhases = (
-				F798559132F8A56ECB66B32D3F9E40FD /* Sources */,
-				9AD1A14C1AF3F2211FD91CCE67D06338 /* Frameworks */,
-				80291CA16951F69C30ABFF22D7EA9A64 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "MessengerKit-MessengerKit";
-			productName = "MessengerKit-MessengerKit";
-			productReference = D813C8993EC52779CBE2861D4CE1FF38 /* MessengerKit.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -976,13 +859,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0D2B79FA8AE6B40CAC9B0839CE6F6380 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		16DEC2259C752EF38588AA30A3D59CA0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1275,27 +1151,30 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NSFWDetector/NSFWDetector-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NSFWDetector/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Disk/Disk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Disk/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/NSFWDetector/NSFWDetector.modulemap";
-				PRODUCT_MODULE_NAME = NSFWDetector;
-				PRODUCT_NAME = NSFWDetector;
+				MODULEMAP_FILE = "Target Support Files/Disk/Disk.modulemap";
+				PRODUCT_MODULE_NAME = Disk;
+				PRODUCT_NAME = Disk;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		085973EF1322B6FE0F9ABD2F93495CBB /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1392,15 +1271,35 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B390DF4A940527BB3565EF654405011 /* NSFWDetector.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MessengerKit";
-				INFOPLIST_FILE = "Target Support Files/MessengerKit/ResourceBundle-MessengerKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_NAME = MessengerKit;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NSFWDetector/NSFWDetector-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NSFWDetector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NSFWDetector/NSFWDetector.modulemap";
+				PRODUCT_MODULE_NAME = NSFWDetector;
+				PRODUCT_NAME = NSFWDetector;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1448,43 +1347,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B684F3B5C2C0471733F219BE9F0CD78B /* Disk.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MessengerKit/MessengerKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MessengerKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MessengerKit/MessengerKit.modulemap";
-				PRODUCT_MODULE_NAME = MessengerKit;
-				PRODUCT_NAME = MessengerKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		72D9B1FF0636FBCACB75D9DF27E2D9EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B390DF4A940527BB3565EF654405011 /* NSFWDetector.xcconfig */;
-			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1509,6 +1371,44 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		69D2D70DA2948AB4ED515B4C88DDB7E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B390DF4A940527BB3565EF654405011 /* NSFWDetector.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NSFWDetector/NSFWDetector-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NSFWDetector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NSFWDetector/NSFWDetector.modulemap";
+				PRODUCT_MODULE_NAME = NSFWDetector;
+				PRODUCT_NAME = NSFWDetector;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1608,7 +1508,7 @@
 			};
 			name = Debug;
 		};
-		8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */ = {
+		C92782E717C52E3633C9A5F211E7987A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1668,84 +1568,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		92C2B3BF6575BBDA51157C5A03728E1C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 357AF7BAA4861A6D29A98098ECDA71DF /* MessengerKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MessengerKit/MessengerKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MessengerKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MessengerKit/MessengerKit.modulemap";
-				PRODUCT_MODULE_NAME = MessengerKit;
-				PRODUCT_NAME = MessengerKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D2A350CD6C8157D2DBB4ABD8A8F40C73 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 967A0EF31BD63E17B52ABDF9508B3AEB /* Disk.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Disk/Disk-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Disk/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Disk/Disk.modulemap";
-				PRODUCT_MODULE_NAME = Disk;
-				PRODUCT_NAME = Disk;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D5F759C82752B2EB010DB3CD3D69707C /* Release */ = {
+		EA8C7AF90938697605468604B2A17B9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1800,84 +1627,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		E14E0D80F9C70A9CD711F8F02846163C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CC60D9742DC6A88B0881148C8EA3261 /* Pods-Spark.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Spark/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Spark/Pods-Spark.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EE7D73C4A3BA68935ED530869DA2D203 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EC65B532BF738256DE1FF633B3F6BEB /* NSFWDetector.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NSFWDetector/NSFWDetector-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NSFWDetector/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/NSFWDetector/NSFWDetector.modulemap";
-				PRODUCT_MODULE_NAME = NSFWDetector;
-				PRODUCT_NAME = NSFWDetector;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1887,8 +1637,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */,
-				D5F759C82752B2EB010DB3CD3D69707C /* Release */,
+				C92782E717C52E3633C9A5F211E7987A /* Debug */,
+				EA8C7AF90938697605468604B2A17B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1896,8 +1646,8 @@
 		33A53F18C01F4767CB35015A1FD26D13 /* Build configuration list for PBXNativeTarget "NSFWDetector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				124D7E180F2D932C981E24123FC7B0EF /* Debug */,
-				EE7D73C4A3BA68935ED530869DA2D203 /* Release */,
+				38ADDFC52EB979F56B6A367103448941 /* Debug */,
+				69D2D70DA2948AB4ED515B4C88DDB7E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1914,8 +1664,8 @@
 		57358B8801E359E63BDF6FE8C33A1C35 /* Build configuration list for PBXNativeTarget "Disk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2A350CD6C8157D2DBB4ABD8A8F40C73 /* Debug */,
-				72D9B1FF0636FBCACB75D9DF27E2D9EA /* Release */,
+				5884F0E312AF6F84E980FC1F3067321C /* Debug */,
+				02F54BE97FCFC5122309D3024459A488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
