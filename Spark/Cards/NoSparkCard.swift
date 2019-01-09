@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class NoSparkCard: UIView {
     //we use lazy properties for each view
@@ -37,13 +38,10 @@ class NoSparkCard: UIView {
         button.backgroundColor = UIColor.buttonGrey
         button.tintColor = UIColor.black
         button.setTitle("SEARCH FOR A SPARK", for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return button
     }()
     
-    @objc func buttonAction(sender: UIButton!) {
-        print("Button tapped")
-    }
+
     
 
     
@@ -63,11 +61,22 @@ class NoSparkCard: UIView {
     private func setupView() {
         backgroundColor = .white
         addSubview(card)
+        setupActions()
         
         addConstrainsWithFormat(format: "H:|-32-[v0]-32-|", view: card)
         addConstrainsWithFormat(format: "V:|-8-[v0]-8-|", view: card)
     }
     
+    private func setupActions() {
+        searchForRelationBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
+    
+    @objc private func buttonAction(sender: UIButton!) {
+        print("ik kan op de button klikken hihihihihihihihihihihihihihihi")
+    }
+    
+    
+
     override class var requiresConstraintBasedLayout: Bool {
         return false
     }
