@@ -12,10 +12,10 @@ import UIKit
 class NoSparkCard: UIView {
     //we use lazy properties for each view
     lazy var card: UIView = {
-        let view = UIView(frame: CGRect(x: 10, y: 20, width: 320, height: 530))
-        view.backgroundColor = UIColor.backgroundGrey
+        let view = UIView()
+        view.backgroundColor = UIColor.white
         view.layer.borderColor = UIColor.cyan.cgColor
-        view.layer.cornerRadius = 22
+        view.layer.cornerRadius = 20
         view.layer.shadowColor = UIColor.shadowGrey.cgColor
         view.layer.shadowOpacity = 2
         view.layer.shadowOffset.width = 0
@@ -63,16 +63,11 @@ class NoSparkCard: UIView {
     private func setupView() {
         backgroundColor = .white
         addSubview(card)
-       // setupLayout()
+        
+        addConstrainsWithFormat(format: "H:|-32-[v0]-32-|", view: card)
+        addConstrainsWithFormat(format: "V:|-8-[v0]-8-|", view: card)
     }
     
-    private func setupLayout() {
-        card.translatesAutoresizingMaskIntoConstraints = true
-        card.center = CGPoint(x: bounds.midX, y: bounds.midY)
-        card.autoresizingMask = [UIView.AutoresizingMask.flexibleLeftMargin, UIView.AutoresizingMask.flexibleRightMargin, UIView.AutoresizingMask.flexibleTopMargin, UIView.AutoresizingMask.flexibleBottomMargin]
-    }
-    
-
     override class var requiresConstraintBasedLayout: Bool {
         return false
     }

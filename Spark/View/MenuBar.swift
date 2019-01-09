@@ -57,7 +57,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
             horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12).isActive = true
         }
         horizontalBarView.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        horizontalBarView.heightAnchor.constraint(equalToConstant: 3).isActive = true
+        horizontalBarView.heightAnchor.constraint(equalToConstant: 2).isActive = true
         
     }
     

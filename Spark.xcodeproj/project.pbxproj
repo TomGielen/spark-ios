@@ -35,9 +35,10 @@
 		8654309921B4AA0100C6CC31 /* passedSparkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654309821B4AA0100C6CC31 /* passedSparkCell.swift */; };
 		8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654309B21B4AC2400C6CC31 /* MenuBar.swift */; };
 		8680874321B70FEC00B57133 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874221B70FEC00B57133 /* ApiService.swift */; };
-		8680874521B7219A00B57133 /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874421B7219A00B57133 /* TabCell.swift */; };
+		8680874521B7219A00B57133 /* Tab1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874421B7219A00B57133 /* Tab1Cell.swift */; };
 		8680874721B72E7400B57133 /* Tab3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680874621B72E7400B57133 /* Tab3Cell.swift */; };
 		8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8681ADDC21DFCA85008B1421 /* ChatViewController.swift */; };
+		8694CDBA21E5FCFD00D8E9B7 /* Tab2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CDB921E5FCFD00D8E9B7 /* Tab2Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,9 +72,10 @@
 		8654309821B4AA0100C6CC31 /* passedSparkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passedSparkCell.swift; sourceTree = "<group>"; };
 		8654309B21B4AC2400C6CC31 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		8680874221B70FEC00B57133 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		8680874421B7219A00B57133 /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
+		8680874421B7219A00B57133 /* Tab1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1Cell.swift; sourceTree = "<group>"; };
 		8680874621B72E7400B57133 /* Tab3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3Cell.swift; sourceTree = "<group>"; };
 		8681ADDC21DFCA85008B1421 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8694CDB921E5FCFD00D8E9B7 /* Tab2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2Cell.swift; sourceTree = "<group>"; };
 		FC2D6A30DE53C0247CAC3D31 /* Pods-Spark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.release.xcconfig"; sourceTree = "<group>"; };
 		FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -205,7 +207,8 @@
 			children = (
 				8654309821B4AA0100C6CC31 /* passedSparkCell.swift */,
 				8654309B21B4AC2400C6CC31 /* MenuBar.swift */,
-				8680874421B7219A00B57133 /* TabCell.swift */,
+				8680874421B7219A00B57133 /* Tab1Cell.swift */,
+				8694CDB921E5FCFD00D8E9B7 /* Tab2Cell.swift */,
 				8680874621B72E7400B57133 /* Tab3Cell.swift */,
 			);
 			path = View;
@@ -363,7 +366,7 @@
 			files = (
 				8654308521B42AE900C6CC31 /* HomeController.swift in Sources */,
 				8680874721B72E7400B57133 /* Tab3Cell.swift in Sources */,
-				8680874521B7219A00B57133 /* TabCell.swift in Sources */,
+				8680874521B7219A00B57133 /* Tab1Cell.swift in Sources */,
 				8623628521B537B000DFCA94 /* PassedRelation.swift in Sources */,
 				8373530121C2C3C700D1B159 /* OnboardingGenderViewController.swift in Sources */,
 				83FAD1FA21DE44BB00B5E127 /* RegisterUser.swift in Sources */,
@@ -384,6 +387,7 @@
 				8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */,
 				8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */,
 				837352FF21C2A34100D1B159 /* UITextField+custom.swift in Sources */,
+				8694CDBA21E5FCFD00D8E9B7 /* Tab2Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
