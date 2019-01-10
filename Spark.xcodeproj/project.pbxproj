@@ -41,6 +41,8 @@
 		8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8681ADDC21DFCA85008B1421 /* ChatViewController.swift */; };
 		8694CDBA21E5FCFD00D8E9B7 /* Tab2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CDB921E5FCFD00D8E9B7 /* Tab2Cell.swift */; };
 		8694CDBC21E6265800D8E9B7 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CDBB21E6265800D8E9B7 /* LoginService.swift */; };
+		8694CDC021E7A0FA00D8E9B7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CDBF21E7A0FA00D8E9B7 /* User.swift */; };
+		8694CDC221E7A41C00D8E9B7 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CDC121E7A41C00D8E9B7 /* Emoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		8681ADDC21DFCA85008B1421 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8694CDB921E5FCFD00D8E9B7 /* Tab2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2Cell.swift; sourceTree = "<group>"; };
 		8694CDBB21E6265800D8E9B7 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		8694CDBF21E7A0FA00D8E9B7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8694CDC121E7A41C00D8E9B7 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		FC2D6A30DE53C0247CAC3D31 /* Pods-Spark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.release.xcconfig"; sourceTree = "<group>"; };
 		FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,6 +157,7 @@
 				83FAD1F921DE44BB00B5E127 /* RegisterUser.swift */,
 				8623628421B537B000DFCA94 /* PassedRelation.swift */,
 				8390199621E4BA79005B4101 /* LoginUser.swift */,
+				8694CDBF21E7A0FA00D8E9B7 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 		8654309421B4A93400C6CC31 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8694CDC121E7A41C00D8E9B7 /* Emoji.swift */,
 				837352FE21C2A34100D1B159 /* UITextField+custom.swift */,
 				8373530221C2C6FD00D1B159 /* UIView+custom.swift */,
 				8373530421C4011800D1B159 /* UIColor.swift */,
@@ -375,6 +381,7 @@
 				8680874521B7219A00B57133 /* Tab1Cell.swift in Sources */,
 				8623628521B537B000DFCA94 /* PassedRelation.swift in Sources */,
 				8373530121C2C3C700D1B159 /* OnboardingGenderViewController.swift in Sources */,
+				8694CDC021E7A0FA00D8E9B7 /* User.swift in Sources */,
 				83FAD1FA21DE44BB00B5E127 /* RegisterUser.swift in Sources */,
 				8373530521C4011800D1B159 /* UIColor.swift in Sources */,
 				8654309921B4AA0100C6CC31 /* passedSparkCell.swift in Sources */,
@@ -387,6 +394,7 @@
 				83FB9FE321E68C3300D9E9E0 /* SearchingCard.swift in Sources */,
 				837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */,
 				8680874321B70FEC00B57133 /* ApiService.swift in Sources */,
+				8694CDC221E7A41C00D8E9B7 /* Emoji.swift in Sources */,
 				8313786221D7B0E900157C39 /* Spark.xcdatamodeld in Sources */,
 				8373530721C41CB400D1B159 /* OnboardingPreferenceViewController.swift in Sources */,
 				837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */,

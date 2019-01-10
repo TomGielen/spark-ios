@@ -54,10 +54,10 @@ class Tab2Cell: BaseCell {
     // Main context
     let mainManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     // Observers when a context has been saved
-    NotificationCenter.default.addObserver(self,
-    selector: #selector(self.contextSave(_ :)),
-    name: NSNotification.Name.NSManagedObjectContextDidSave,
-    object: nil)
+//    NotificationCenter.default.addObserver(self,
+//    selector: #selector(self.contextSave(_ :)),
+//    name: NSNotification.Name.NSManagedObjectContextDidSave,
+//    object: nil)
     
     func contextSave(_ notification: Notification) {
         // Retrieves the context saved from the notification

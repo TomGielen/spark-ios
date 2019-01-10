@@ -13,14 +13,14 @@ class PassedRelation: NSObject {
     var userImage: String?
     var name: String?
     
-    var first_user_id: User?
-    var second_user_id: User?
+    var first_user_id: RelationUser?
+    var second_user_id: RelationUser?
     
     var message: String?
     
 }
 
-class User: NSObject {
+class RelationUser: NSObject {
     var firstName: String?
     var userImage: String?
 }

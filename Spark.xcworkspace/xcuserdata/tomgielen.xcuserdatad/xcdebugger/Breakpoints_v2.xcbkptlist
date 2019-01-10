@@ -6,11 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spark/View/Tab3Cell.swift"
-            timestampString = "568736694.530267"
+            timestampString = "568831576.969276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -65,6 +65,132 @@
             endingLineNumber = "33"
             landmarkName = "fetchPassedRelations(completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spark/Controllers/ChatViewController.swift"
+            timestampString = "568831850.355262"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ChatViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spark.ChatViewController.steve.getter : Spark.User"
+                  moduleName = "Spark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomgielen/iOS/Spark/Spark/Controllers/ChatViewController.swift"
+                  timestampString = "568829415.691943"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spark.ChatViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Spark.ChatViewController"
+                  moduleName = "Spark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomgielen/iOS/Spark/Spark/Controllers/ChatViewController.swift"
+                  timestampString = "568829415.694091"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spark.ChatViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Spark.ChatViewController&gt;"
+                  moduleName = "Spark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomgielen/iOS/Spark/Spark/Controllers/ChatViewController.swift"
+                  timestampString = "568829415.69618"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spark/Controllers/ChatViewController.swift"
+            timestampString = "568831850.355648"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "ChatViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spark.ChatViewController.tim.getter : Spark.User"
+                  moduleName = "Spark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomgielen/iOS/Spark/Spark/Controllers/ChatViewController.swift"
+                  timestampString = "568829415.702757"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spark.ChatViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Spark.ChatViewController"
+                  moduleName = "Spark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomgielen/iOS/Spark/Spark/Controllers/ChatViewController.swift"
+                  timestampString = "568829415.70465"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "349">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spark.ChatViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Spark.ChatViewController&gt;"
+                  moduleName = "Spark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomgielen/iOS/Spark/Spark/Controllers/ChatViewController.swift"
+                  timestampString = "568829415.70631"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "292">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
