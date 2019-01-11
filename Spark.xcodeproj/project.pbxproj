@@ -10,6 +10,8 @@
 		665D6C70476D9FA6626711DA /* Pods_Spark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF13FD299D970DEF4F89FE76 /* Pods_Spark.framework */; };
 		830E6C7D21C92F0900010D71 /* OnboardingImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */; };
 		8313786221D7B0E900157C39 /* Spark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8313786021D7B0E900157C39 /* Spark.xcdatamodeld */; };
+		831E0FD121E8F0D10096F8C4 /* RelationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E0FD021E8F0D10096F8C4 /* RelationCard.swift */; };
+		831E0FD321E904C60096F8C4 /* ActiveRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E0FD221E904C60096F8C4 /* ActiveRelation.swift */; };
 		837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */; };
 		837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */; };
 		837352FA21C1341B00D1B159 /* OnboardingAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */; };
@@ -49,6 +51,8 @@
 		025602FF2EEB9C4521736538 /* Pods-Spark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spark/Pods-Spark.debug.xcconfig"; sourceTree = "<group>"; };
 		830E6C7C21C92F0900010D71 /* OnboardingImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageViewController.swift; sourceTree = "<group>"; };
 		8313786121D7B0E900157C39 /* Spark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spark.xcdatamodel; sourceTree = "<group>"; };
+		831E0FD021E8F0D10096F8C4 /* RelationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationCard.swift; sourceTree = "<group>"; };
+		831E0FD221E904C60096F8C4 /* ActiveRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRelation.swift; sourceTree = "<group>"; };
 		837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntroViewController.swift; sourceTree = "<group>"; };
 		837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNameViewController.swift; sourceTree = "<group>"; };
 		837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAgeViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			children = (
 				83949F3C21E5409600041702 /* NoSparkCard.swift */,
 				83FB9FE221E68C3300D9E9E0 /* SearchingCard.swift */,
+				831E0FD021E8F0D10096F8C4 /* RelationCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				8623628421B537B000DFCA94 /* PassedRelation.swift */,
 				8390199621E4BA79005B4101 /* LoginUser.swift */,
 				8694CDBF21E7A0FA00D8E9B7 /* User.swift */,
+				831E0FD221E904C60096F8C4 /* ActiveRelation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,7 +403,9 @@
 				8694CDC221E7A41C00D8E9B7 /* Emoji.swift in Sources */,
 				8313786221D7B0E900157C39 /* Spark.xcdatamodeld in Sources */,
 				8373530721C41CB400D1B159 /* OnboardingPreferenceViewController.swift in Sources */,
+				831E0FD121E8F0D10096F8C4 /* RelationCard.swift in Sources */,
 				837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */,
+				831E0FD321E904C60096F8C4 /* ActiveRelation.swift in Sources */,
 				83949F3D21E5409600041702 /* NoSparkCard.swift in Sources */,
 				8654309C21B4AC2400C6CC31 /* MenuBar.swift in Sources */,
 				8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */,

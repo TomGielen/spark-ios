@@ -11,7 +11,7 @@ import UIKit
 import SnapKit
 import CoreData
 
-class SearchingCard: UIView {
+class RelationCard: UIView {
     //we use lazy properties for each view
     lazy var card: UIView = {
         let view = UIView()
@@ -27,25 +27,19 @@ class SearchingCard: UIView {
         return view
     }()
     
-    lazy var text: UILabel = {
-        let text = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
-        text.text = "We are finding a spark for you."
-        return text
-    }()
-    
-    
-    
     
     //initWithFrame to init view from code
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        getRelation()
     }
     
     //initWithCode to init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
+        getRelation()
     }
     
     //common func to init our view
@@ -64,6 +58,37 @@ class SearchingCard: UIView {
     override class var requiresConstraintBasedLayout: Bool {
         return false
     }
+    
+    func getRelation(){
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                
+                if let id = data.value(forKey: "user_id") as? String {
+                    let jsonUrlString = String(format: "https://sparklesapi.azurewebsites.net/relation/active_relation/%@", id )
+                    
+                    guard let url = URL(string: jsonUrlString) else { return }
+                    URLSession.shared.dataTask(with: url) { (data, response, err) in
+                        guard let data = data else { return }
+                        do {
+                            let singleObject = try JSONDecoder().decode(ActiveRelation.self, from: data)
+                            let json = singleObject
+                            print(json)
+                        } catch let jsonErr {
+                            print("Error serializing json:", jsonErr)
+                        }
+                        }.resume()
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+    }
 }
 
-let SearchingCardView = SearchingCard()
+let RelationCardView = RelationCard()

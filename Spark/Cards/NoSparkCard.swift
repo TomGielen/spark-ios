@@ -16,13 +16,14 @@ class NoSparkCard: UIView {
     lazy var card: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
-        view.layer.borderColor = UIColor.cyan.cgColor
+        view.layer.borderColor = UIColor.shadowGrey.cgColor
+        view.layer.borderWidth = 1
         view.layer.cornerRadius = 20
-        view.layer.shadowColor = UIColor.shadowGrey.cgColor
-        view.layer.shadowOpacity = 2
-        view.layer.shadowOffset.width = 0
-        view.layer.shadowOffset.height = 1
-        view.layer.shadowRadius = 4
+        //        view.layer.shadowColor = UIColor.shadowGrey.cgColor
+        //        view.layer.shadowOpacity = 2
+        //        view.layer.shadowOffset.width = 0
+        //        view.layer.shadowOffset.height = 1
+        //        view.layer.shadowRadius = 4
         view.addSubview(text)
         view.addSubview(searchForRelationBtn)
         return view

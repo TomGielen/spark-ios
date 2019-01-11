@@ -74,7 +74,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     func checkIfUserIsRegistered() -> Bool {
         let name = UserDefaults.standard.bool(forKey: "FinishedOnboarding")
-        if (name) {
+        if (!name) {
             return false
         } else {
             return true
