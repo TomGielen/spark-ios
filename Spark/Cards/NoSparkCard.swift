@@ -109,6 +109,14 @@ class NoSparkCard: UIView {
             do {
                 let singleObject = try JSONDecoder().decode(matchResponse.self, from: data)
                 let json = singleObject.confirmation
+                
+                HomeController().updateUser(id: id){
+                    (error) in
+                    if let error = error {
+                        fatalError(error.localizedDescription)
+                    }
+                }
+                
                 print(json!)
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)

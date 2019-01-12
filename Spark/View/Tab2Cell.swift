@@ -28,9 +28,9 @@ class Tab2Cell: BaseCell {
                 case "no_relation":
                     setupCard(cardView: NoSparkCard())
                 case "in_relation":
-                    setupCard(cardView: SearchingCard())
+                    setupCard(cardView: RelationCard())
                 case "searching":
-                    setupCard(cardView: SearchingCard())
+                    setupCard(cardView: RelationCard())
                 default:
                     print("no value in switch statement")
                 }
@@ -50,31 +50,6 @@ class Tab2Cell: BaseCell {
         addConstrainsWithFormat(format: "V:|[v0]|", view: view)
         
     }
-    
-    // Main context
-    let mainManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-    // Observers when a context has been saved
-//    NotificationCenter.default.addObserver(self,
-//    selector: #selector(self.contextSave(_ :)),
-//    name: NSNotification.Name.NSManagedObjectContextDidSave,
-//    object: nil)
-    
-    func contextSave(_ notification: Notification) {
-        // Retrieves the context saved from the notification
-        guard let context = notification.object as? NSManagedObjectContext else { return }
-        // Checks if the parent context is the main one
-        if context.parent === mainManagedObjectContext {
-            
-            // Saves the main context
-            mainManagedObjectContext.performAndWait {
-                do {
-                    try mainManagedObjectContext.save()
-                } catch {
-                }
-            }
-        }
-    }
-
 
 }
 

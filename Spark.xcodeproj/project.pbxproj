@@ -12,6 +12,7 @@
 		8313786221D7B0E900157C39 /* Spark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8313786021D7B0E900157C39 /* Spark.xcdatamodeld */; };
 		831E0FD121E8F0D10096F8C4 /* RelationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E0FD021E8F0D10096F8C4 /* RelationCard.swift */; };
 		831E0FD321E904C60096F8C4 /* ActiveRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E0FD221E904C60096F8C4 /* ActiveRelation.swift */; };
+		831E0FD521EA3CA60096F8C4 /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E0FD421EA3CA60096F8C4 /* UserUpdate.swift */; };
 		837352F021B7F7D500D1B159 /* OnboardingIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */; };
 		837352F821B9534C00D1B159 /* OnboardingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */; };
 		837352FA21C1341B00D1B159 /* OnboardingAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */; };
@@ -53,6 +54,7 @@
 		8313786121D7B0E900157C39 /* Spark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spark.xcdatamodel; sourceTree = "<group>"; };
 		831E0FD021E8F0D10096F8C4 /* RelationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationCard.swift; sourceTree = "<group>"; };
 		831E0FD221E904C60096F8C4 /* ActiveRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRelation.swift; sourceTree = "<group>"; };
+		831E0FD421EA3CA60096F8C4 /* UserUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
 		837352EF21B7F7D500D1B159 /* OnboardingIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntroViewController.swift; sourceTree = "<group>"; };
 		837352F721B9534C00D1B159 /* OnboardingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNameViewController.swift; sourceTree = "<group>"; };
 		837352F921C1341B00D1B159 /* OnboardingAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAgeViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				8654308421B42AE900C6CC31 /* HomeController.swift */,
 				8681ADDC21DFCA85008B1421 /* ChatViewController.swift */,
+				831E0FD421EA3CA60096F8C4 /* UserUpdate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				8681ADDD21DFCA85008B1421 /* ChatViewController.swift in Sources */,
 				8694CDBC21E6265800D8E9B7 /* LoginService.swift in Sources */,
 				837352FF21C2A34100D1B159 /* UITextField+custom.swift in Sources */,
+				831E0FD521EA3CA60096F8C4 /* UserUpdate.swift in Sources */,
 				8694CDBA21E5FCFD00D8E9B7 /* Tab2Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

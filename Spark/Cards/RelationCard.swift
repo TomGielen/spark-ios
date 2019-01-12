@@ -12,6 +12,7 @@ import SnapKit
 import CoreData
 
 class RelationCard: UIView {
+    var homeController: UIViewController?
     //we use lazy properties for each view
     lazy var card: UIView = {
         let view = UIView()
@@ -24,6 +25,12 @@ class RelationCard: UIView {
         //        view.layer.shadowOffset.width = 0
         //        view.layer.shadowOffset.height = 1
         //        view.layer.shadowRadius = 4
+        
+        return view
+    }()
+    
+    lazy var UserImage: UIImageView = {
+        let view = UIImageView()
         return view
     }()
     
@@ -31,6 +38,7 @@ class RelationCard: UIView {
     //initWithFrame to init view from code
     override init(frame: CGRect) {
         super.init(frame: frame)
+        homeController = HomeController()
         setupView()
         getRelation()
     }
@@ -38,6 +46,7 @@ class RelationCard: UIView {
     //initWithCode to init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+         homeController = HomeController()
         setupView()
         getRelation()
     }
@@ -45,14 +54,34 @@ class RelationCard: UIView {
     //common func to init our view
     private func setupView() {
         backgroundColor = .white
-        addSubview(card)
+        addSubview(UserImage)
         setupActions()
         
-        addConstrainsWithFormat(format: "H:|-32-[v0]-32-|", view: card)
-        addConstrainsWithFormat(format: "V:|-8-[v0]-8-|", view: card)
+        ///addConstrainsWithFormat(format: "H:|-32-[v0]-32-|", view: card)
+        ///addConstrainsWithFormat(format: "V:|-8-[v0]-8-|", view: card)
+        addConstrainsWithFormat(format: "H:|-32-[v0]-32-|", view: UserImage)
+        addConstrainsWithFormat(format: "V:|-8-[v0]-8-|", view: UserImage)
     }
     
-    private func setupActions() {    }
+    private func setupActions() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        UserImage.isUserInteractionEnabled = true
+        UserImage.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func imageTapped(gesture: UIGestureRecognizer)
+    {
+        // if the tapped view is a UIImageView then set it to imageview
+        if let imageView = gesture.view as? UIImageView {
+            print("Image Tapped")
+            //Here you can initiate your new ViewController
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "sparkChatNavController") as! ChatViewController
+            //vc.passedRelation = cell.passedRelation
+            homeController?.show(vc, sender: nil)
+        }
+    }
+    
     
     
     override class var requiresConstraintBasedLayout: Bool {
@@ -60,7 +89,6 @@ class RelationCard: UIView {
     }
     
     func getRelation(){
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
@@ -79,6 +107,7 @@ class RelationCard: UIView {
                             let singleObject = try JSONDecoder().decode(ActiveRelation.self, from: data)
                             let json = singleObject
                             print(json)
+                            self.getUserImage(firstUser: json.first_user_id, secondUser: json.second_user_id ,userId: id)
                         } catch let jsonErr {
                             print("Error serializing json:", jsonErr)
                         }
@@ -88,6 +117,32 @@ class RelationCard: UIView {
         } catch {
             print("Failed")
         }
+    }
+    
+    
+    func getUserImage(firstUser: ActiveRelationUser, secondUser: ActiveRelationUser ,userId: String){
+        if (firstUser._id == userId ){
+            setUserImage(image : secondUser.userImage)
+        } else {
+            setUserImage(image : firstUser.userImage)
+        }
+    }
+    
+    func setUserImage(image : String){
+        let url = URL(string: image)
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                DispatchQueue.main.async {
+                    self.UserImage.image = UIImage(data: data!)
+                }
+            }
+            
+            }.resume()
     }
 }
 

@@ -69,6 +69,34 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         setupCollectionView()
         setupMenuBar()
+        
+      
+        // Observers when a context has been saved
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.contextSave(_ :)),
+                                               name: NSNotification.Name.NSManagedObjectContextDidSave,
+                                               object: nil)
+        
+        
+    }
+    
+    @objc func contextSave(_ notification: Notification) {
+        let mainManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        // Retrieves the context saved from the notification
+        guard let context = notification.object as? NSManagedObjectContext else { return }
+        
+        // Checks if the parent context is the main one
+        if context.parent === mainManagedObjectContext {
+            print("notification....................................")
+            // Saves the main context
+            mainManagedObjectContext.performAndWait {
+                do {
+                    try mainManagedObjectContext.save()
+                } catch {
+                    
+                }
+            }
+        }
     }
     
     
