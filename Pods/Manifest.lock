@@ -1,10 +1,12 @@
 PODS:
+  - Blurry (0.1.0)
   - Disk (0.4.0)
   - MessengerKit (1.0.0)
   - NSFWDetector (1.1.0)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
+  - Blurry (~> 0.1.0)
   - Disk (~> 0.4.0)
   - MessengerKit (from `https://github.com/steve228uk/MessengerKit.git`)
   - NSFWDetector
@@ -12,6 +14,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Blurry
     - Disk
     - NSFWDetector
     - SnapKit
@@ -26,11 +29,12 @@ CHECKOUT OPTIONS:
     :git: https://github.com/steve228uk/MessengerKit.git
 
 SPEC CHECKSUMS:
+  Blurry: 9ac3be9b7198444ff5e7eed9528c72222dacaf46
   Disk: ef2956657d5bb56034b38b29b352170165226440
   MessengerKit: 98afa44728b8e12672ece6db7764433e72832bf7
   NSFWDetector: aefec2254932bdc933cccc9385abfe07ae36a7a1
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 0c603dbc809b58e47e465c306a193e460beff0df
+PODFILE CHECKSUM: a3454947bfe422e2177def582a3e48d99a2ad682
 
 COCOAPODS: 1.5.3

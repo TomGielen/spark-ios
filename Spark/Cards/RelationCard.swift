@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SnapKit
 import CoreData
+import Blurry
 
 class RelationCard: UIView {
     var homeController: UIViewController?
@@ -31,6 +32,11 @@ class RelationCard: UIView {
     
     lazy var UserImage: UIImageView = {
         let view = UIImageView()
+        view.layer.borderColor = UIColor.shadowGrey.cgColor
+        view.layer.borderWidth = 1
+        view.layer.cornerRadius = 20
+        view.layer.masksToBounds = true
+
         return view
     }()
     
@@ -138,7 +144,9 @@ class RelationCard: UIView {
             
             DispatchQueue.global(qos: .userInitiated).async {
                 DispatchQueue.main.async {
-                    self.UserImage.image = UIImage(data: data!)
+                    let blurryImage = Blurry.blurryImage(withOptions: BlurryOptions.pro, forImage: UIImage(data: data!)!, size: UIImage(data: data!)!.size, blurRadius: 35.0)
+
+                    self.UserImage.image = blurryImage
                 }
             }
             
