@@ -83,7 +83,7 @@ class RelationCard: UIView {
             //Here you can initiate your new ViewController
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "sparkChatNavController") as! ChatViewController
-            //vc.passedRelation = cell.passedRelation
+            //vc.passedRelation = cell.
             homeController?.show(vc, sender: nil)
         }
     }

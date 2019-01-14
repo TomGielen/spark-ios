@@ -69,7 +69,7 @@ class Tab3Cell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         let cell = collectionView.cellForItem(at: indexPath) as! passedSparkCell
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "sparkChatNavController") as! ChatViewController
-        //vc.passedRelation = cell.passedRelation
+        vc.relation = cell.passedRelation
         homeController?.show(vc, sender: nil)
     }
 

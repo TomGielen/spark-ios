@@ -178,7 +178,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         if indexPath.item == 1 {
             let cell = collectionView1.dequeueReusableCell(withReuseIdentifier: tab2CellId, for: indexPath) as! Tab2Cell
             cell.homeController = self
-            cell.backgroundColor = UIColor.blue
+            cell.backgroundColor = UIColor.backgroundGrey
             return cell
         } else {
             let cell = collectionView1.dequeueReusableCell(withReuseIdentifier: tab3CellId, for: indexPath) as! Tab3Cell

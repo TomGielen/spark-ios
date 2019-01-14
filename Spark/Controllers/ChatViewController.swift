@@ -12,6 +12,8 @@ import MessengerKit
 
 class ChatViewController: MSGMessengerViewController {
     
+    var relation: PassedRelation?
+    
     let steve = User(displayName: "Steve", avatar: #imageLiteral(resourceName: "bram"), avatarUrl: nil, isSender: true)
     
     let tim = User(displayName: "Tim", avatar: #imageLiteral(resourceName: "bram"), avatarUrl: nil, isSender: false)
@@ -51,7 +53,9 @@ class ChatViewController: MSGMessengerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "iMessage"
+        if let rel = relation {
+            navigationItem.title = rel.name
+        }
         
         dataSource = self
         delegate = self
@@ -134,6 +138,7 @@ extension ChatViewController {
 extension ChatViewController: MSGDataSource {
     
     func numberOfSections() -> Int {
+        print(messages)
         return messages.count
     }
     

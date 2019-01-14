@@ -45,6 +45,7 @@ class Tab2Cell: BaseCell {
         let view = cardView
         view.backgroundColor = UIColor.backgroundGrey
         self.addSubview(view)
+        
         //self.setupConstraints()
         addConstrainsWithFormat(format: "H:|[v0]|", view: view)
         addConstrainsWithFormat(format: "V:|[v0]|", view: view)

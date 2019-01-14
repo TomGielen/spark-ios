@@ -59,6 +59,53 @@ class ApiService: NSObject {
         
     }
     
+//    func fetchMessages(completion: @escaping ([MessageObject]) -> ()) {
+//
+//        let jsonUrlString = "https://sparklesapi.azurewebsites.net/relation/relation/5bf6db39f9cd9b0038ee18e6"
+//        guard let url = URL(string: jsonUrlString) else { return }
+//
+//        URLSession.shared.dataTask(with: url) { (data, response, err) in
+//
+//            guard let data = data else { return }
+//
+//
+//            do {
+//
+//                let singleObject = try JSONDecoder().decode(SingleMessageObject.self, from: data)
+//
+//
+//                let json = singleObject.data
+//
+//                var passedRelations = [MSGMessage]()
+//
+//                for dictionary in json {
+//
+////                    let message = MessageObj()
+////                    message.user_id = dictionary.user_id
+////                    message._id = dictionary._id
+////                    if(dictionary.messages?.count != 0){
+////                        passedRelation.message = dictionary.messages?[0].text
+////                    }
+////
+////                    passedRelations.append(passedRelation)
+//                }
+//
+//                DispatchQueue.global(qos: .userInitiated).async {
+//                    DispatchQueue.main.async {
+//                        completion(passedRelations)
+//                    }
+//                }
+//
+//            } catch let jsonErr {
+//                print("Error serializing json:", jsonErr)
+//            }
+//
+//
+//
+//            }.resume()
+//
+//    }
+    
     func registerAccount(completion: @escaping ([PassedRelation]) -> ()) {
         
         
