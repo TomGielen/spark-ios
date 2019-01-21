@@ -12,21 +12,10 @@ import XCTest
 
 class SparkTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testColor() {
+        let ConvertedColor = UIColor.rgb(red: 100, green: 0, blue: 0, alpha: 1)
         
+        XCTAssertNil(ConvertedColor)
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        Spark.
-    }
-
     
 }
